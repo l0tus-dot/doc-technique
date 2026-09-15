@@ -1,0 +1,95 @@
+site_name: Documentation technique
+site_description: Procédures réseau, systèmes et sécurité — BTS SIO SISR
+site_author: Raphaël Coantin
+site_url: https://l0tus-dot.github.io/doc-technique/
+
+repo_url: https://github.com/l0tus-dot/doc-technique
+repo_name: doc-technique
+edit_uri: edit/main/docs/
+
+copyright: Raphaël Coantin — BTS SIO SISR
+
+theme:
+  name: material
+  language: fr
+  favicon: assets/favicon.svg
+  icon:
+    logo: material/router-network
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Passer en clair
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Passer en sombre
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: "#"
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search:
+      lang: fr
+
+nav:
+  - Accueil:
+      - index.md
+      - conventions.md
+      - gabarit.md
+  - Réseau:
+      - reseau/index.md
+      - reseau/routage-statique.md
+      - reseau/nat-pat.md
+  - Systèmes:
+      - systemes/index.md
+  - Sécurité:
+      - securite/index.md
+  - Services:
+      - services/index.md
+  - Mémos:
+      - memos/cisco-ios.md
