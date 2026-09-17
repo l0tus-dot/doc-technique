@@ -5,6 +5,7 @@ Configuration des équipements d'interconnexion : routage, traduction d'adresses
 ## Fiches disponibles
 
 - [Routage statique](routage-statique.md) — interconnexion de deux LAN, route par défaut, distance administrative
+- [RIP version 2](rip-v2.md) — routage dynamique, no auto-summary, route par défaut, authentification
 - [NAT et PAT](nat-pat.md) — sortie du LAN derrière une adresse publique, publication d'un serveur
 
 ## À rédiger

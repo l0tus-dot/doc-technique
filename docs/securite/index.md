@@ -1,6 +1,10 @@
-# Sécurité
+# Cybersécurité
 
-Filtrage, chiffrement des accès distants et durcissement.
+Filtrage, chiffrement des accès distants, durcissement et gestion des privilèges.
+
+## Fiches disponibles
+
+- [Délégation de droits avec sudo](sudo-delegation.md) — sudoers, visudo, délégation ciblée, NOEXEC, alias
 
 ## À rédiger
 

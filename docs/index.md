@@ -18,9 +18,9 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
     [Ouvrir la section](systemes/index.md)
 
--   __Sécurité__
+-   __Cybersécurité__
 
-    pfSense, WireGuard, durcissement, certificats.
+    pfSense, WireGuard, durcissement, délégation de droits.
 
     [Ouvrir la section](securite/index.md)
 
