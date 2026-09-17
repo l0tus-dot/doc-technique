@@ -32,6 +32,18 @@ Les exemples utilisent toujours le même plan, pour que les fiches se combinent 
 - Une valeur entre chevrons est à remplacer : `<adresse-ip>`.
 - Les commandes sont données en mode d'exécution complet, prompt inclus quand le mode compte.
 
+## Schémas de topologie
+
+Les topologies sont dessinées en Mermaid (blocs reliés par des liaisons), rendu directement par le site — pas d'image à joindre ni à régénérer en cas de correction.
+
+- Cercle (`((...))`) — équipement d'interconnexion : routeur, commutateur.
+- Rectangle (`[...]`) — hôte : poste, serveur.
+- Liaison simple (`---`) — lien filaire classique.
+- Liaison double trait (`===`) — liaison point à point ou WAN.
+- Le libellé sur la liaison porte l'interface et l'adresse : `"Gi0/1 · 192.168.10.1/24"`.
+
+Le [gabarit](gabarit.md) contient un exemple prêt à copier.
+
 ## Nommage des fichiers
 
 Un fichier par procédure, en minuscules, sans accent, mots séparés par des tirets : `routage-statique.md`, `nat-pat.md`. Le fichier est rangé dans le dossier de sa section.

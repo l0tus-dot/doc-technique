@@ -141,6 +141,22 @@
   background-color: var(--bn-surface-high);
 }
 
+/* ---------- Diagrammes Mermaid ---------- */
+
+[data-md-color-scheme="slate"] {
+  --md-mermaid-edge-color: var(--bn-cyan);
+  --md-mermaid-node-bg-color: rgba(34, 211, 238, 0.08);
+  --md-mermaid-node-fg-color: var(--bn-text);
+  --md-mermaid-label-bg-color: var(--bn-surface);
+  --md-mermaid-label-fg-color: var(--bn-text);
+}
+
+[data-md-color-scheme="default"] {
+  --md-mermaid-edge-color: var(--bn-cyan-deep);
+  --md-mermaid-node-bg-color: rgba(14, 116, 144, 0.06);
+  --md-mermaid-label-bg-color: #ffffff;
+}
+
 /* ---------- Accessibilité ---------- */
 
 :focus-visible {

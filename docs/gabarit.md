@@ -17,8 +17,18 @@ Ce que la procédure permet de faire, et dans quelle situation on l'applique.
 
 ## Topologie
 
-```text
-[PC1] --- [SW1] --- [R1] === [R2] --- [SRV1]
+```mermaid
+flowchart LR
+    PC1["PC1"]
+    SW1(("SW1"))
+    R1(("R1"))
+    R2(("R2"))
+    SRV1["SRV1"]
+
+    PC1 --- SW1
+    SW1 --- R1
+    R1 === R2
+    R2 --- SRV1
 ```
 
 ## Procédure

@@ -12,10 +12,16 @@ Faire apprendre automatiquement les routes entre plusieurs routeurs, sans les sa
 
 ## Topologie
 
-```text
-192.168.10.0/24              10.0.0.0/30              192.168.20.0/24
-   [PC1] --- Gi0/1 [ R1 ] Gi0/0 ======= Gi0/0 [ R2 ] Gi0/1 --- [SRV1]
-              .1          .1              .2          .1
+```mermaid
+flowchart LR
+    PC1["PC1"]
+    R1(("R1"))
+    R2(("R2"))
+    SRV1["SRV1"]
+
+    PC1 ---|"Gi0/1 · 192.168.10.1/24"| R1
+    R1 ===|"Gi0/0 ↔ Gi0/0 · 10.0.0.0/30<br>domaine RIP"| R2
+    R2 ---|"Gi0/1 · 192.168.20.1/24"| SRV1
 ```
 
 ## Procédure

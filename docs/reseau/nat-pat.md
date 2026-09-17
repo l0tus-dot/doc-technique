@@ -12,10 +12,14 @@ Permettre à un réseau privé d'atteindre l'extérieur derrière une seule adre
 
 ## Topologie
 
-```text
-192.168.10.0/24                        203.0.113.0/24
-  [PC1] --- Gi0/1 [ R1 ] Gi0/0 --------- [ FAI ]
-   .10       inside  .1    outside .2      .1
+```mermaid
+flowchart LR
+    PC1["PC1<br>192.168.10.10"]
+    R1(("R1"))
+    FAI[/"FAI"/]
+
+    PC1 ---|"Gi0/1 inside · 192.168.10.1/24"| R1
+    R1 ---|"Gi0/0 outside · 203.0.113.2/24"| FAI
 ```
 
 ## Procédure
