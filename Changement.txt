@@ -1,10 +1,7 @@
 Ajouter :
 - Mettre les commandes docker les bases (Créer, ajouter, sauvegarde, supprimée, vérification, image)
 - Mettre les commandes docker compose (fichier onecloud)
-- Ajouter un onglet avec tout les problèmes fréquent sur un réseau avec leurs résolution
 
 
 Changement :
-- Enlever l'option d'éditer les pages 
-- Enlever l'option pour aller sur le dépot
-- Mettre des images au lieu des schéma 
+
