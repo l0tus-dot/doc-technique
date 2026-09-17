@@ -30,6 +30,12 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
     [Ouvrir la section](services/index.md)
 
+-   __Dépannage réseau__
+
+    Pannes fréquentes classées par couche, avec leur résolution.
+
+    [Ouvrir la section](depannage/index.md)
+
 </div>
 
 ## Comment lire une fiche
