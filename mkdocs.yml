@@ -1,7 +1,7 @@
 site_name: Documentation technique
 site_description: Procédures réseau, systèmes et cybersécurité — BTS SIO SISR
 site_author: Raphaël Coantin
-site_url: https://LOTUS.github.io/doc-technique/
+site_url: https://docs.votredomaine.fr/
 
 copyright: Raphaël Coantin — BTS SIO SISR
 
@@ -84,6 +84,7 @@ nav:
       - reseau/routage-statique.md
       - reseau/rip-v2.md
       - reseau/nat-pat.md
+      - reseau/docker.md
   - Dépannage réseau:
       - depannage/index.md
   - Systèmes:
