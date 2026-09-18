@@ -88,6 +88,23 @@ end
 write memory
 ```
 
+## Plan de retour arrière
+
+Retirer uniquement les routes ajoutées par cette procédure, sans toucher aux interfaces ni à une éventuelle route par défaut préexistante.
+
+```cisco
+configure terminal
+no ip route 192.168.20.0 255.255.255.0 10.0.0.2
+no ip route 0.0.0.0 0.0.0.0 203.0.113.1
+end
+write memory
+```
+
+Faire la même chose sur R2 pour la route symétrique (`no ip route 192.168.10.0 255.255.255.0 10.0.0.1`).
+
+!!! warning "Vérifier les dépendances avant de retirer"
+    Si du NAT ou une ACL s'appuie sur cette route (voir [NAT et PAT](nat-pat.md)), la retirer coupe aussi ce qui en dépend. Confirmer avec `show ip route` et `show running-config | include ip route` qu'aucune autre configuration n'en a besoin.
+
 ## Vérification
 
 === "Cisco IOS"

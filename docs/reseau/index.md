@@ -7,7 +7,8 @@ Configuration des équipements d'interconnexion : routage, traduction d'adresses
 - [Routage statique](routage-statique.md) — interconnexion de deux LAN, route par défaut, distance administrative
 - [RIP version 2](rip-v2.md) — routage dynamique, no auto-summary, route par défaut, authentification
 - [NAT et PAT](nat-pat.md) — sortie du LAN derrière une adresse publique, publication d'un serveur
-- [Docker](docker.md) — installation, réseau docker0, commandes images/conteneurs, partage de fichiers avec l'hôte
+
+Pour la conteneurisation, voir la section [Conteneurisation / DevOps](../conteneurisation/index.md).
 
 Pour les pannes qui ne sont pas propres à une procédure précise, voir [Dépannage réseau](../depannage/index.md).
 

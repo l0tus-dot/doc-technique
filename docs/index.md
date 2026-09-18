@@ -30,6 +30,12 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
     [Ouvrir la section](services/index.md)
 
+-   __Conteneurisation / DevOps__
+
+    Docker : installation, réseau, images, conteneurs.
+
+    [Ouvrir la section](conteneurisation/index.md)
+
 -   __Dépannage réseau__
 
     Pannes fréquentes classées par couche, avec leur résolution.

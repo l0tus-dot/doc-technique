@@ -45,6 +45,14 @@ commande
 commande
 ```
 
+## Plan de retour arrière
+
+Comment annuler cette configuration si elle doit être retirée.
+
+```cisco
+commande d'annulation
+```
+
 ## Vérification
 
 ```cisco

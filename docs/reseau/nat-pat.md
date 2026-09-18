@@ -115,6 +115,50 @@ write memory
 !!! note "Rendre le transfert IP persistant"
     `sysctl -w` ne survit pas au redémarrage. Écrire `net.ipv4.ip_forward=1` dans `/etc/sysctl.d/99-routeur.conf`, puis `sysctl --system`.
 
+## Plan de retour arrière
+
+=== "Cisco IOS"
+
+    ```cisco
+    configure terminal
+    no ip nat inside source list 1 interface GigabitEthernet0/0 overload
+    no ip nat inside source static tcp 192.168.20.10 443 203.0.113.2 443 extendable
+    no access-list 1
+    interface GigabitEthernet0/1
+     no ip nat inside
+    exit
+    interface GigabitEthernet0/0
+     no ip nat outside
+    exit
+    end
+    write memory
+    ```
+
+    Retirer d'abord les règles de traduction, puis l'ACL, puis les marquages d'interface — dans cet ordre, pour ne jamais laisser une interface marquée `nat inside`/`outside` sans règle associée. Les traductions déjà en cours restent actives jusqu'à expiration ; pour les couper immédiatement :
+
+    ```cisco
+    clear ip nat translation *
+    ```
+
+=== "Linux (nftables)"
+
+    ```bash
+    nft delete table ip nat
+    ```
+
+    Supprime la table entière — donc toutes les règles NAT qu'elle contenait, pas seulement celle ajoutée ici. Sur un pare-feu où d'autres règles NAT coexistent, retirer uniquement la règle concernée avec `nft delete rule` et le handle correspondant (`nft -a list table ip nat` pour l'obtenir).
+
+=== "Linux (iptables)"
+
+    ```bash
+    iptables -t nat -D POSTROUTING -o ens18 -s 192.168.10.0/24 -j MASQUERADE
+    ```
+
+    `-D` retire précisément la règle ajoutée, en reprenant exactement les mêmes paramètres que ceux utilisés pour l'ajouter avec `-A`.
+
+!!! warning "Le trafic sortant s'interrompt immédiatement"
+    Sans NAT/PAT, les machines du LAN ne peuvent plus atteindre l'extérieur avec une adresse privée. Prévenir les utilisateurs concernés avant de retirer cette configuration en dehors d'une fenêtre de maintenance.
+
 ## Vérification
 
 ```cisco

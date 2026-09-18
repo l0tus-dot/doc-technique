@@ -58,13 +58,14 @@ ls /etc/netplan/
 ip a
 ```
 
-### 2. Éditer le fichier
+### 2. Sauvegarder puis éditer le fichier
 
 ```bash
+sudo cp /etc/netplan/<nom-du-fichier>.yaml /etc/netplan/<nom-du-fichier>.yaml.bak
 sudo nano /etc/netplan/<nom-du-fichier>.yaml
 ```
 
-Reprendre la structure de l'exemple ci-dessus en adaptant l'interface, l'adresse, la passerelle et les DNS.
+Reprendre la structure de l'exemple ci-dessus en adaptant l'interface, l'adresse, la passerelle et les DNS. La copie de sauvegarde est ce qui rend le [plan de retour arrière](#plan-de-retour-arriere) immédiat.
 
 ### 3. Vérifier la syntaxe sans rien appliquer
 
@@ -92,6 +93,18 @@ sudo chmod 600 /etc/netplan/<nom-du-fichier>.yaml
 ```
 
 Netplan avertit si un fichier de configuration reste lisible par d'autres utilisateurs que root.
+
+## Plan de retour arrière
+
+```bash
+sudo cp /etc/netplan/<nom-du-fichier>.yaml.bak /etc/netplan/<nom-du-fichier>.yaml
+sudo netplan try
+```
+
+La sauvegarde faite à l'étape 2 permet un retour immédiat à la configuration précédente. Sans elle, revenir en arrière demande de ressaisir manuellement les anciennes valeurs — d'où l'intérêt de toujours sauvegarder avant d'éditer, même pour un changement qui semble mineur.
+
+!!! tip "Pas de sauvegarde disponible"
+    Si la machine était en DHCP avant cette procédure, repasser `dhcp4: true` et supprimer les clés `addresses`, `routes` et `nameservers` reproduit l'état d'origine dans la plupart des cas.
 
 ## Vérification
 

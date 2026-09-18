@@ -84,7 +84,9 @@ nav:
       - reseau/routage-statique.md
       - reseau/rip-v2.md
       - reseau/nat-pat.md
-      - reseau/docker.md
+  - Conteneurisation / DevOps:
+      - conteneurisation/index.md
+      - conteneurisation/docker.md
   - Dépannage réseau:
       - depannage/index.md
   - Systèmes:

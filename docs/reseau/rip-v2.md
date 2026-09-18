@@ -103,6 +103,41 @@ end
 write memory
 ```
 
+## Plan de retour arrière
+
+Deux cas selon que RIP a été introduit uniquement pour cette procédure, ou qu'il gère déjà d'autres réseaux sur ce routeur.
+
+=== "RIP introduit pour cette procédure"
+
+    Supprimer tout le processus :
+
+    ```cisco
+    configure terminal
+    no router rip
+    end
+    write memory
+    ```
+
+    `no router rip` retire l'ensemble de la configuration RIP d'un coup — réseaux déclarés, `passive-interface`, `default-information originate` inclus.
+
+=== "RIP déjà utilisé pour d'autres réseaux"
+
+    Retirer uniquement ce qui a été ajouté :
+
+    ```cisco
+    configure terminal
+    router rip
+     no network 192.168.10.0
+     no passive-interface GigabitEthernet0/1
+     no default-information originate
+    exit
+    end
+    write memory
+    ```
+
+!!! warning "Un retour arrière RIP peut couper des routes en silence"
+    Une fois le processus arrêté, les routes qu'il annonçait disparaissent progressivement de la table sur les autres routeurs (jusqu'au timeout). Si aucune route statique de secours n'existe, la connectivité se coupe sans message d'erreur explicite au moment du retrait.
+
 ## Vérification
 
 ```cisco

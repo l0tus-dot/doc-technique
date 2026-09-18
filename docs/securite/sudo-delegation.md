@@ -170,6 +170,33 @@ Cmnd_Alias    NETCDES  = /usr/sbin/ifdown, /usr/sbin/ifup, sudoedit /etc/network
 TECHINFO SRVINFO=(ALL) NETCDES
 ```
 
+## Plan de retour arrière
+
+=== "Règle ajoutée dans /etc/sudoers"
+
+    ```bash
+    sudo visudo
+    ```
+
+    Supprimer la ligne ajoutée (par exemple `epsilon ALL=(ALL) NOEXEC:/usr/bin/vi /etc/hosts`), puis enregistrer. `visudo` revalide la syntaxe à la sortie : impossible de laisser le fichier dans un état cassé, y compris lors d'un retrait.
+
+=== "Fichier séparé dans sudoers.d"
+
+    ```bash
+    sudo rm /etc/sudoers.d/SUDO_TECHINFO
+    ```
+
+    Un fichier isolé dans `sudoers.d` se retire sans toucher au fichier principal — c'est un avantage concret de cette approche par rapport à une règle ajoutée directement dans `/etc/sudoers`.
+
+!!! tip "Garder une copie avant de modifier"
+    `visudo` ne conserve pas d'historique des versions précédentes. Avant une modification en environnement réel, `sudo cp /etc/sudoers /etc/sudoers.bak-$(date +%F)` permet de revenir à l'état antérieur par une simple copie si le retrait ciblé s'avère incomplet.
+
+Si les comptes créés pour cette procédure (`lambda`, `superman`, `epsilon`, `omicron`, `omega`) n'ont plus d'usage au-delà du test, les supprimer solde complètement le retour arrière :
+
+```bash
+sudo deluser --remove-home epsilon
+```
+
 ## Vérification
 
 ```bash
