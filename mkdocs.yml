@@ -95,3 +95,4 @@ nav:
       - services/index.md
   - Mémos:
       - memos/cisco-ios.md
+      - memos/netplan.md
