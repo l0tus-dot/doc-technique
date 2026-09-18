@@ -60,6 +60,9 @@ service docker restart
 ip a show docker0
 ```
 
+!!! warning "Coupure de connectivité le temps du redémarrage"
+    `service docker restart` interrompt brièvement `docker0` et coupe la mise en réseau de tous les conteneurs en cours d'exécution pendant que le démon redémarre. Les conteneurs eux-mêmes ne s'arrêtent pas, mais leurs connexions réseau actives (Portainer inclus) se rétablissent seulement une fois le service revenu.
+
 !!! warning "Revenir en arrière"
     Supprimer directement le fichier ne suffit pas toujours. Repasser d'abord `bip` à sa valeur par défaut, redémarrer, vérifier, puis seulement supprimer le fichier :
 
