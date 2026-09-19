@@ -29,7 +29,6 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
-    - navigation.instant
     - navigation.footer
     - toc.follow
     - search.suggest
@@ -71,14 +70,32 @@ markdown_extensions:
       custom_checkbox: true
 
 plugins:
-  - search:
-      lang: fr
+  - search
+  - i18n:
+      languages:
+        - locale: fr
+          name: Français
+          default: true
+        - locale: en
+          name: English
+          nav_translations:
+            Accueil: Home
+            Projets transverses: Cross-cutting projects
+            Réseau: Network
+            Conteneurisation / DevOps: Containerization / DevOps
+            Dépannage réseau: Network troubleshooting
+            Systèmes: Systems
+            Cybersécurité: Cybersecurity
+            Services: Services
+            Mémos: Cheat sheets
 
 nav:
   - Accueil:
       - index.md
       - conventions.md
       - gabarit.md
+  - Projets transverses:
+      - projets-transverses/index.md
   - Réseau:
       - reseau/index.md
       - reseau/routage-statique.md

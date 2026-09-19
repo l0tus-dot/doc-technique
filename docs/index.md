@@ -6,6 +6,12 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
 <div class="grid cards" markdown>
 
+-   __Projets transverses__
+
+    Architectures complètes combinant plusieurs briques — la vision globale, pas une technologie isolée.
+
+    [Ouvrir la section](projets-transverses/index.md)
+
 -   __Réseau__
 
     Routage, NAT/PAT, VLAN, ACL. Les commandes Cisco IOS et leurs équivalents Linux.
@@ -46,6 +52,8 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
 ## Comment lire une fiche
 
-Toutes les fiches suivent la même structure : contexte, prérequis, topologie, procédure, vérification, dépannage. La section **Vérification** donne la commande qui prouve que la configuration fonctionne — c'est elle qu'il faut lancer avant de considérer une manipulation terminée.
+Les fiches par technologie suivent la même structure : contexte, prérequis, topologie, procédure, plan de retour arrière, vérification, dépannage. La section **Vérification** donne la commande qui prouve que la configuration fonctionne — c'est elle qu'il faut lancer avant de considérer une manipulation terminée.
 
-Les [conventions d'écriture](conventions.md) détaillent les notations utilisées. Le [gabarit](gabarit.md) sert de point de départ pour toute nouvelle fiche.
+Les fiches de [Projets transverses](projets-transverses/index.md) suivent une structure différente, pensée pour une architecture multi-briques plutôt qu'une procédure unique — voir leur page d'index.
+
+Les [conventions d'écriture](conventions.md) détaillent les notations utilisées. Le [gabarit](gabarit.md) sert de point de départ pour toute nouvelle fiche par technologie.

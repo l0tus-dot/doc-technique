@@ -48,6 +48,10 @@ Le [gabarit](gabarit.md) contient un exemple prêt à copier.
 
 En environnement de production, toute modification s'accompagne d'un plan d'annulation. Chaque fiche qui modifie une configuration existante inclut une section **Plan de retour arrière**, juste après la Procédure : les commandes qui annulent précisément ce qui vient d'être ajouté, pas une réinitialisation générale. Une fiche purement consultative (mémo de commandes, page de dépannage) n'a pas à en comporter.
 
+## Fiches de projet transverse
+
+Une fiche qui combine plusieurs briques distinctes ne suit pas le gabarit ci-dessus : elle documente l'architecture et ses points d'intégration, pas une procédure unique. Structure et gabarit dans [Projets transverses](projets-transverses/index.md).
+
 ## Nommage des fichiers
 
 Un fichier par procédure, en minuscules, sans accent, mots séparés par des tirets : `routage-statique.md`, `nat-pat.md`. Le fichier est rangé dans le dossier de sa section.
