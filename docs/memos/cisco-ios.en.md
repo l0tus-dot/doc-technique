@@ -29,10 +29,20 @@ show ip nat translations
 ## Backup and reset
 
 ```cisco
-write memory
+end
 copy running-config startup-config
+```
+
+!!! tip "Filename confirmation"
+    `copy running-config startup-config` asks you to confirm the destination filename (`Destination filename [startup-config]?`) — pressing ++enter++ is enough.
+
+`write memory` (or `wr`) does the same thing as a historical shorthand, without that confirmation prompt. Still supported, but `copy running-config startup-config` is the form to prefer in a procedure.
+
+```cisco
 copy running-config tftp:
 ```
+
+Backs up to a remote TFTP server instead of the device's local memory.
 
 !!! danger "Full reset"
     `erase startup-config` followed by `reload` wipes the saved configuration. No confirmation is asked for after you validate.

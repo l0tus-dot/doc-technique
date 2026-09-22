@@ -100,7 +100,7 @@ interface GigabitEthernet0/0
 
 ```cisco
 end
-write memory
+copy running-config startup-config
 ```
 
 ## Rollback plan
@@ -115,7 +115,7 @@ Two cases, depending on whether RIP was introduced solely for this procedure, or
     configure terminal
     no router rip
     end
-    write memory
+    copy running-config startup-config
     ```
 
     `no router rip` removes the entire RIP configuration in one go — declared networks, `passive-interface`, `default-information originate` included.
@@ -132,7 +132,7 @@ Two cases, depending on whether RIP was introduced solely for this procedure, or
      no default-information originate
     exit
     end
-    write memory
+    copy running-config startup-config
     ```
 
 !!! warning "A RIP rollback can cut routes silently"

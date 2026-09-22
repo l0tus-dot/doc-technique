@@ -29,10 +29,20 @@ show ip nat translations
 ## Sauvegarde et réinitialisation
 
 ```cisco
-write memory
+end
 copy running-config startup-config
+```
+
+!!! tip "Confirmation de nom de fichier"
+    `copy running-config startup-config` demande de confirmer le nom de destination (`Destination filename [startup-config]?`) — valider avec ++enter++ suffit.
+
+`write memory` (ou `wr`) fait la même chose en un raccourci historique, sans cette confirmation. Toujours supporté, mais `copy running-config startup-config` est la forme à privilégier dans une fiche.
+
+```cisco
 copy running-config tftp:
 ```
+
+Sauvegarde vers un serveur TFTP distant plutôt que sur la mémoire locale de l'équipement.
 
 !!! danger "Réinitialisation complète"
     `erase startup-config` puis `reload` efface la configuration enregistrée. Aucune confirmation n'est demandée après validation.

@@ -100,7 +100,7 @@ interface GigabitEthernet0/0
 
 ```cisco
 end
-write memory
+copy running-config startup-config
 ```
 
 ## Plan de retour arrière
@@ -115,7 +115,7 @@ Deux cas selon que RIP a été introduit uniquement pour cette procédure, ou qu
     configure terminal
     no router rip
     end
-    write memory
+    copy running-config startup-config
     ```
 
     `no router rip` retire l'ensemble de la configuration RIP d'un coup — réseaux déclarés, `passive-interface`, `default-information originate` inclus.
@@ -132,7 +132,7 @@ Deux cas selon que RIP a été introduit uniquement pour cette procédure, ou qu
      no default-information originate
     exit
     end
-    write memory
+    copy running-config startup-config
     ```
 
 !!! warning "Un retour arrière RIP peut couper des routes en silence"

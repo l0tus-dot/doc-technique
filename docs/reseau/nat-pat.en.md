@@ -91,7 +91,7 @@ ip nat inside source list 1 pool PUBLIC overload
 
 ```cisco
 end
-write memory
+copy running-config startup-config
 ```
 
 ## Linux equivalent
@@ -131,7 +131,7 @@ write memory
      no ip nat outside
     exit
     end
-    write memory
+    copy running-config startup-config
     ```
 
     Remove the translation rules first, then the ACL, then the interface markings — in that order, so an interface is never left marked `nat inside`/`outside` with no rule attached. Translations already in progress stay active until they expire; to cut them immediately:

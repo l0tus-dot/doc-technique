@@ -85,7 +85,7 @@ ip route 0.0.0.0 0.0.0.0 203.0.113.1
 
 ```cisco
 end
-write memory
+copy running-config startup-config
 ```
 
 ## Plan de retour arrière
@@ -97,7 +97,7 @@ configure terminal
 no ip route 192.168.20.0 255.255.255.0 10.0.0.2
 no ip route 0.0.0.0 0.0.0.0 203.0.113.1
 end
-write memory
+copy running-config startup-config
 ```
 
 Faire la même chose sur R2 pour la route symétrique (`no ip route 192.168.10.0 255.255.255.0 10.0.0.1`).
