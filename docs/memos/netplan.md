@@ -1,127 +1,183 @@
 # Mémo Netplan
 
-Netplan est l'outil de configuration réseau standard sur Ubuntu Server (18.04 et plus). Il ne pilote pas directement l'interface : il traduit un fichier YAML vers un moteur sous-jacent — `systemd-networkd` par défaut sur un serveur, `NetworkManager` sur un poste de bureau.
+Netplan est l'outil de configuration réseau standard sur Ubuntu Server (18.04 et plus). Il traduit un fichier YAML vers un moteur sous-jacent — `systemd-networkd` par défaut sur un serveur, `NetworkManager` sur un poste de bureau.
 
-## Emplacement des fichiers
+---
+
+## 1. Fichiers de configuration
 
 ```bash
-ls /etc/netplan/
+ls /etc/netplan/          # liste les fichiers présents
+cat /etc/netplan/*.yaml   # affiche tous les fichiers d'un coup
 ```
-
-Le nom du fichier varie selon l'origine de l'installation :
 
 | Fichier typique | Origine |
 |---|---|
 | `00-installer-config.yaml` | Installation via l'installateur Ubuntu Server |
-| `50-cloud-init.yaml` | Machine provisionnée par cloud-init (image cloud, Proxmox, etc.) |
+| `50-cloud-init.yaml` | Machine provisionnée par cloud-init (Proxmox, image cloud…) |
 | `01-netcfg.yaml` | Nom historique, encore rencontré sur certaines images |
 
-!!! tip "Retrouver le bon fichier"
-    En cas de doute, `cat /etc/netplan/*.yaml` affiche le contenu de tous les fichiers présents plutôt que de deviner leur nom. S'il y en a plusieurs, ils sont fusionnés par ordre alphabétique, le dernier lu l'emportant en cas de clé en conflit.
+!!! tip "Plusieurs fichiers coexistants"
+    S'il y en a plusieurs, ils sont fusionnés par ordre alphabétique — le dernier lu l'emporte en cas de clé en conflit. Pour éviter toute ambiguïté, ne garder qu'un seul fichier faisant autorité.
 
-## Syntaxe
+---
 
-Le YAML est sensible à l'indentation : uniquement des espaces, jamais de tabulation, chaque niveau strictement aligné sous son parent.
+## 2. Syntaxe du fichier YAML
+
+Le YAML est sensible à l'indentation : **espaces uniquement**, jamais de tabulation, chaque niveau strictement aligné sous son parent.
+
+### Adressage statique
 
 ```yaml
 network:
+  version: 2
   ethernets:
     ens160:
       dhcp4: false
-      addresses: [100.115.29.11/23]
+      addresses:
+        - 192.168.10.11/24
       routes:
         - to: default
-          via: 100.115.29.254
+          via: 192.168.10.1
       nameservers:
-        addresses: [100.115.28.41, 100.11.29.41]
+        addresses:
+          - 1.1.1.1
+          - 8.8.8.8
+        search:
+          - lab.local
+```
+
+### Adressage DHCP
+
+```yaml
+network:
   version: 2
+  ethernets:
+    ens160:
+      dhcp4: true
+```
+
+### Deux interfaces (serveur dual-homed)
+
+```yaml
+network:
+  version: 2
+  ethernets:
+    ens160:
+      dhcp4: false
+      addresses: [192.168.10.11/24]
+      routes:
+        - to: default
+          via: 192.168.10.1
+    ens192:
+      dhcp4: false
+      addresses: [10.0.0.11/30]
 ```
 
 | Clé | Rôle |
 |---|---|
-| `ens160` | Nom de l'interface à configurer — le retrouver avec `ip a` ou `networkctl list` |
+| `ens160` | Nom de l'interface — retrouver avec `ip a` ou `networkctl list` |
 | `dhcp4: false` | Désactive le DHCP pour passer en adressage statique |
-| `addresses` | Adresse de l'interface au format CIDR (`/23` = masque `255.255.254.0`) |
-| `routes` / `to: default` | Route par défaut — remplace l'ancienne clé `gateway4`, dépréciée |
-| `nameservers.addresses` | Serveurs DNS interrogés par la machine |
-| `version: 2` | Version du format de fichier Netplan (seule valeur utilisée actuellement) |
+| `addresses` | Adresse au format CIDR |
+| `routes` / `to: default` | Route par défaut — remplace `gateway4` (dépréciée) |
+| `nameservers.addresses` | Serveurs DNS |
+| `nameservers.search` | Domaines de recherche DNS |
+| `version: 2` | Version du format Netplan (seule valeur utilisée) |
 
 !!! note "`gateway4` est dépréciée"
-    Les versions récentes de Netplan avertissent, sans bloquer, si `gateway4: <adresse>` est utilisée à la place de la forme `routes` ci-dessus. Préférer la seconde sur toute configuration nouvelle.
+    Les versions récentes de Netplan avertissent si `gateway4` est utilisée. Préférer la forme `routes` / `to: default` / `via` sur toute configuration nouvelle.
 
-## Procédure
+---
 
-### 1. Identifier le fichier et l'interface
+## 3. Procédure d'application
 
-```bash
-ls /etc/netplan/
-ip a
-```
-
-### 2. Sauvegarder puis éditer le fichier
+### 1. Identifier l'interface et le fichier
 
 ```bash
-sudo cp /etc/netplan/<nom-du-fichier>.yaml /etc/netplan/<nom-du-fichier>.yaml.bak
-sudo nano /etc/netplan/<nom-du-fichier>.yaml
+ip a                              # liste les interfaces et leurs adresses actuelles
+networkctl list                   # état réseau via systemd-networkd
+ls /etc/netplan/                  # fichier(s) à modifier
 ```
 
-Reprendre la structure de l'exemple ci-dessus en adaptant l'interface, l'adresse, la passerelle et les DNS. La copie de sauvegarde est ce qui rend le [plan de retour arrière](#plan-de-retour-arriere) immédiat.
+### 2. Sauvegarder avant de modifier
 
-### 3. Vérifier la syntaxe sans rien appliquer
+```bash
+sudo cp /etc/netplan/<fichier>.yaml /etc/netplan/<fichier>.yaml.bak
+```
+
+Toujours faire cette copie avant d'éditer — c'est ce qui rend le retour arrière immédiat.
+
+### 3. Éditer le fichier
+
+```bash
+sudo nano /etc/netplan/<fichier>.yaml
+```
+
+### 4. Valider la syntaxe sans appliquer
 
 ```bash
 sudo netplan generate
 ```
 
-Traduit la configuration vers le moteur sous-jacent sans y toucher, et signale toute erreur de syntaxe ou de clé avant qu'elle ne casse la connectivité.
+Traduit la configuration vers le moteur sans y toucher, et signale toute erreur avant de toucher à la connectivité.
 
-### 4. Appliquer sans risquer de perdre la main
+### 5. Appliquer avec filet de sécurité
 
 ```bash
 sudo netplan try
 ```
 
 !!! warning "Le réflexe à prendre en SSH"
-    `netplan try` applique la configuration immédiatement, mais l'annule automatiquement au bout de 120 secondes si elle n'est pas confirmée avec ++enter++. C'est la commande à utiliser systématiquement à distance : une erreur d'adresse ou de route ne coupe pas la session, la machine revient seule à l'état précédent.
+    `netplan try` applique la configuration immédiatement, mais l'**annule automatiquement après 120 secondes** si elle n'est pas confirmée avec ++enter++. C'est la commande à utiliser systématiquement à distance — une erreur d'adresse ou de route ne coupe pas la session, la machine revient seule à l'état précédent.
 
     `netplan apply` applique directement, sans filet — à réserver à un accès console ou à une configuration déjà validée avec `try`.
 
-### 5. Corriger les permissions si Netplan les signale
+### 6. Corriger les permissions si Netplan les signale
 
 ```bash
-sudo chmod 600 /etc/netplan/<nom-du-fichier>.yaml
+sudo chmod 600 /etc/netplan/<fichier>.yaml
 ```
 
-Netplan avertit si un fichier de configuration reste lisible par d'autres utilisateurs que root.
+Netplan avertit si le fichier reste lisible par d'autres utilisateurs que root (`-rw-r--r--` au lieu de `-rw-------`).
 
-## Plan de retour arrière
+---
+
+## 4. Plan de retour arrière
 
 ```bash
-sudo cp /etc/netplan/<nom-du-fichier>.yaml.bak /etc/netplan/<nom-du-fichier>.yaml
+sudo cp /etc/netplan/<fichier>.yaml.bak /etc/netplan/<fichier>.yaml
 sudo netplan try
 ```
 
-La sauvegarde faite à l'étape 2 permet un retour immédiat à la configuration précédente. Sans elle, revenir en arrière demande de ressaisir manuellement les anciennes valeurs — d'où l'intérêt de toujours sauvegarder avant d'éditer, même pour un changement qui semble mineur.
+La sauvegarde faite à l'étape 2 rend le retour immédiat. Sans elle, il faut ressaisir manuellement les anciennes valeurs.
 
 !!! tip "Pas de sauvegarde disponible"
     Si la machine était en DHCP avant cette procédure, repasser `dhcp4: true` et supprimer les clés `addresses`, `routes` et `nameservers` reproduit l'état d'origine dans la plupart des cas.
 
-## Vérification
+---
+
+## 5. Vérification
 
 ```bash
-ip a show ens160
-ip route
-resolvectl status ens160
+ip a show ens160                  # adresse appliquée sur l'interface
+ip route                          # table de routage (route par défaut présente ?)
+resolvectl status ens160          # DNS pris en compte par le résolveur
+ping -c 4 8.8.8.8                 # connectivité Internet
+ping -c 4 lab.local               # résolution DNS locale
+networkctl status ens160          # état détaillé via systemd-networkd
 ```
 
-L'adresse, la route par défaut et les serveurs DNS doivent correspondre à ce qui a été déclaré. `resolvectl status` confirme que les DNS sont bien pris en compte par le résolveur, pas seulement écrits dans le fichier.
+`resolvectl status` confirme que les DNS sont bien pris en compte par le résolveur, pas seulement écrits dans le fichier.
 
-## Dépannage
+---
+
+## 6. Dépannage
 
 | Symptôme | Cause probable | Correction |
 |---|---|---|
-| `netplan generate` échoue avec une erreur de syntaxe | Indentation incohérente, tabulation au lieu d'espaces | Comparer l'indentation avec l'exemple ; un éditeur affichant les espaces aide à repérer l'erreur |
-| Configuration appliquée mais aucune connectivité | Mauvais nom d'interface | Vérifier le nom réel avec `ip a` — il varie selon l'hyperviseur (`ens160`, `eth0`, `enp0s3`…) |
-| Perte de connexion SSH après application | `netplan apply` utilisé directement, sans passer par `try` | À l'avenir, toujours valider avec `netplan try` ; en cas de coupure, récupérer un accès console pour corriger le fichier |
-| Adresse correcte mais résolution de noms en échec | Bloc `nameservers` mal indenté (doit être au même niveau que `addresses` et `routes`, sous l'interface) | Vérifier l'alignement avec l'exemple ; confirmer avec `resolvectl status` |
-| Deux fichiers `.yaml` se contredisent | Plusieurs fichiers dans `/etc/netplan/`, fusionnés par ordre alphabétique | `cat /etc/netplan/*.yaml` pour repérer le conflit ; ne garder qu'un seul fichier faisant autorité si possible |
+| `netplan generate` échoue | Indentation incohérente ou tabulation | Comparer avec l'exemple ; utiliser un éditeur affichant les espaces |
+| Configuration appliquée mais pas de connectivité | Mauvais nom d'interface | Vérifier le nom réel avec `ip a` (`ens160`, `eth0`, `enp0s3`…) |
+| Perte de connexion SSH après `netplan apply` | `apply` utilisé sans passer par `try` | Accès console pour corriger ; toujours utiliser `netplan try` à distance |
+| Adresse correcte mais DNS en échec | Bloc `nameservers` mal indenté | Vérifier l'alignement ; confirmer avec `resolvectl status` |
+| Deux fichiers `.yaml` se contredisent | Fusion par ordre alphabétique | `cat /etc/netplan/*.yaml` pour repérer le conflit |
+| Avertissement `gateway4 deprecated` | Clé dépréciée utilisée | Remplacer par `routes` / `to: default` / `via` |
