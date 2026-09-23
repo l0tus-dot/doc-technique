@@ -105,8 +105,8 @@
 
 /* Corps principal */
 .md-typeset {
-  font-size:   0.85rem;   /* +9% vs 0.78rem précédent */
-  line-height: 1.75;      /* Optimum lecture texte technique */
+  font-size:   0.78rem;
+  line-height: 1.75;
   font-family: var(--font-body);
 }
 
