@@ -12,19 +12,27 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true    # annule le build précédent si un nouveau push arrive
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0      # nécessaire pour git-revision-date si ajouté plus tard
+
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.x"   # dernière 3.x stable, patches de sécurité inclus
           cache: pip
-      - run: pip install -r requirements.txt
-      - run: mkdocs build --strict
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Construire le site
+        run: mkdocs build --strict
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

@@ -1,7 +1,7 @@
 site_name: Documentation technique
 site_description: Procédures réseau, systèmes et cybersécurité — BTS SIO SISR
 site_author: Raphaël Coantin
-site_url: https://docs.votredomaine.fr/
+site_url: https://l0tus-dot.github.io/doc-technique/
 
 copyright: Raphaël Coantin — BTS SIO SISR
 
@@ -30,12 +30,15 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.footer
+    - navigation.indexes       # permet de cliquer sur une section pour ouvrir son index
     - toc.follow
     - search.suggest
     - search.highlight
+    - search.share             # bouton de partage de recherche
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
+    - content.tooltips         # info-bulles sur les abréviations
 
 extra_css:
   - stylesheets/extra.css
@@ -51,6 +54,7 @@ markdown_extensions:
   - toc:
       permalink: "#"
       toc_depth: 2
+      title: Sur cette page         # titre de la table des matières
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
@@ -58,7 +62,6 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -68,9 +71,13 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
-  - search
+  - search:
+      lang: fr                      # index de recherche en français
   - i18n:
       languages:
         - locale: fr
@@ -80,14 +87,23 @@ plugins:
           name: English
           nav_translations:
             Accueil: Home
+            Conventions: Conventions
+            Gabarit: Template
             Projets transverses: Cross-cutting projects
             Réseau: Network
+            Routage statique: Static routing
+            Routage dynamique — RIP version 2: Dynamic routing — RIP v2
+            NAT et PAT: NAT and PAT
             Conteneurisation / DevOps: Containerization / DevOps
+            Docker: Docker
             Dépannage réseau: Network troubleshooting
             Systèmes: Systems
             Cybersécurité: Cybersecurity
+            Délégation de droits avec sudo: Privilege delegation with sudo
             Services: Services
             Mémos: Cheat sheets
+            Mémo Cisco IOS: Cisco IOS cheat sheet
+            Mémo Netplan: Netplan cheat sheet
 
 nav:
   - Accueil:
