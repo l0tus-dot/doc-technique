@@ -1,0 +1,172 @@
+/* Palette « Baie réseau »
+   fond profond, accent cyan, ambre réservé aux avertissements. */
+
+:root {
+  --bn-bg: #0b1220;
+  --bn-surface: #111b2e;
+  --bn-surface-high: #16233a;
+  --bn-line: #1e2c47;
+  --bn-cyan: #22d3ee;
+  --bn-cyan-deep: #0e7490;
+  --bn-amber: #f59e0b;
+  --bn-text: #d7e1f0;
+  --bn-muted: #8ca0bc;
+}
+
+/* ---------- Schéma sombre (par défaut) ---------- */
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 220;
+
+  --md-default-bg-color: var(--bn-bg);
+  --md-default-bg-color--light: var(--bn-surface);
+  --md-default-fg-color: var(--bn-text);
+  --md-default-fg-color--light: var(--bn-muted);
+  --md-default-fg-color--lighter: #5c7192;
+  --md-default-fg-color--lightest: #24354f;
+
+  --md-primary-fg-color: #0e1930;
+  --md-primary-bg-color: var(--bn-text);
+  --md-accent-fg-color: var(--bn-cyan);
+
+  --md-typeset-color: var(--bn-text);
+  --md-typeset-a-color: var(--bn-cyan);
+  --md-typeset-mark-color: rgba(34, 211, 238, 0.25);
+
+  --md-code-bg-color: #0e182b;
+  --md-code-fg-color: #e3ecf8;
+  --md-code-hl-keyword-color: #7dd3fc;
+  --md-code-hl-string-color: #86efac;
+  --md-code-hl-number-color: var(--bn-amber);
+  --md-code-hl-comment-color: #64748b;
+  --md-code-hl-name-color: var(--bn-text);
+  --md-code-hl-function-color: var(--bn-cyan);
+
+  --md-footer-bg-color: #080e19;
+  --md-footer-bg-color--dark: #060b14;
+}
+
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  border-bottom: 1px solid var(--bn-line);
+}
+
+/* ---------- Schéma clair ---------- */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0e1930;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: var(--bn-cyan-deep);
+  --md-typeset-a-color: var(--bn-cyan-deep);
+}
+
+/* ---------- Typographie ---------- */
+
+.md-typeset {
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.2em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* ---------- Blocs de code ---------- */
+
+.md-typeset pre > code {
+  border: 1px solid var(--bn-line);
+  border-radius: 6px;
+}
+
+[data-md-color-scheme="default"] .md-typeset pre > code {
+  border-color: rgba(14, 25, 48, 0.12);
+}
+
+.md-typeset code {
+  font-feature-settings: "liga" 0;
+}
+
+/* ---------- Encarts ---------- */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-width: 0 0 0 3px;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 0.74rem;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  background-color: var(--bn-surface);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-left-color: var(--bn-amber);
+}
+
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: rgba(245, 158, 11, 0.12);
+}
+
+.md-typeset .warning > .admonition-title::before,
+.md-typeset .warning > summary::before {
+  background-color: var(--bn-amber);
+}
+
+/* ---------- Tableaux ---------- */
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  background-color: var(--bn-surface);
+  border-color: var(--bn-line);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: var(--bn-surface-high);
+}
+
+/* ---------- Diagrammes Mermaid ---------- */
+
+[data-md-color-scheme="slate"] {
+  --md-mermaid-edge-color: var(--bn-cyan);
+  --md-mermaid-node-bg-color: rgba(34, 211, 238, 0.08);
+  --md-mermaid-node-fg-color: var(--bn-text);
+  --md-mermaid-label-bg-color: var(--bn-surface);
+  --md-mermaid-label-fg-color: var(--bn-text);
+}
+
+[data-md-color-scheme="default"] {
+  --md-mermaid-edge-color: var(--bn-cyan-deep);
+  --md-mermaid-node-bg-color: rgba(14, 116, 144, 0.06);
+  --md-mermaid-label-bg-color: #ffffff;
+}
+
+/* ---------- Accessibilité ---------- */
+
+:focus-visible {
+  outline: 2px solid var(--bn-cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
