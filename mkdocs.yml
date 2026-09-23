@@ -12,7 +12,7 @@ theme:
   icon:
     logo: material/router-network
   font:
-    text: Inter
+    text: IBM Plex Sans
     code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: dark)"
