@@ -170,3 +170,10 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------- Table des matières : limiter à 1 niveau (h2 uniquement) ---------- */
+
+/* Cache les sous-listes imbriquées (h3+) dans le TOC latéral droit */
+.md-nav--secondary .md-nav {
+  display: none;
+}
