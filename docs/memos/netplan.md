@@ -1,3 +1,12 @@
+---
+description: Configurer le réseau sur Ubuntu Server avec Netplan — adressage statique, DHCP, dual-homed, netplan try et retour arrière.
+tags:
+  - Linux
+  - Réseau
+  - Ubuntu
+  - Mémo
+---
+
 # Mémo Netplan
 
 Netplan est l'outil de configuration réseau standard sur Ubuntu Server (18.04 et plus). Il traduit un fichier YAML vers un moteur sous-jacent — `systemd-networkd` par défaut sur un serveur, `NetworkManager` sur un poste de bureau.

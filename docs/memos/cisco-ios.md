@@ -1,3 +1,11 @@
+---
+description: Aide-mémoire des commandes Cisco IOS essentielles — modes, configuration initiale, SSH, interfaces, diagnostic, sauvegarde, debug.
+tags:
+  - Cisco
+  - Réseau
+  - Mémo
+---
+
 # Mémo Cisco IOS
 
 Aide-mémoire des commandes IOS les plus utilisées en TP et en production. Chaque section suit la même progression : mode → commande → résultat attendu.

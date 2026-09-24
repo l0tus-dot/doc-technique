@@ -1,0 +1,19 @@
+# Normalisation des fins de ligne
+# Évite les warnings LF/CRLF à chaque commit sur Windows
+
+* text=auto
+*.md  text eol=lf
+*.yml text eol=lf
+*.css text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.svg text eol=lf
+*.html text eol=lf
+*.js  text eol=lf
+
+# Fichiers binaires — jamais convertis
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff2 binary
+*.tar binary

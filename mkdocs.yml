@@ -7,6 +7,7 @@ copyright: Raphaël Coantin — BTS SIO SISR
 
 theme:
   name: material
+  custom_dir: overrides
   language: fr
   favicon: assets/favicon.svg
   icon:
@@ -30,15 +31,16 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.footer
-    - navigation.indexes       # permet de cliquer sur une section pour ouvrir son index
+    - navigation.indexes
+    - navigation.path          # fil d'Ariane (breadcrumb)
     - toc.follow
     - search.suggest
     - search.highlight
-    - search.share             # bouton de partage de recherche
+    - search.share
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
-    - content.tooltips         # info-bulles sur les abréviations
+    - content.tooltips
 
 extra_css:
   - stylesheets/extra.css
@@ -54,7 +56,7 @@ markdown_extensions:
   - toc:
       permalink: "#"
       toc_depth: 2
-      title: Sur cette page         # titre de la table des matières
+      title: Sur cette page
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
@@ -77,7 +79,17 @@ markdown_extensions:
 
 plugins:
   - search:
-      lang: fr                      # index de recherche en français
+      lang: fr
+  - tags:
+      tags_file: tags.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      locale: fr
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
   - i18n:
       languages:
         - locale: fr
@@ -89,6 +101,7 @@ plugins:
             Accueil: Home
             Conventions: Conventions
             Gabarit: Template
+            Tags: Tags
             Projets transverses: Cross-cutting projects
             Réseau: Network
             Routage statique: Static routing
@@ -110,6 +123,7 @@ nav:
       - index.md
       - conventions.md
       - gabarit.md
+      - tags.md
   - Projets transverses:
       - projets-transverses/index.md
   - Réseau:

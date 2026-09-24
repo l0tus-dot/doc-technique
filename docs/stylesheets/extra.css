@@ -645,3 +645,175 @@
     font-size: 0.75rem;
   }
 }
+
+/* ============================================================
+   BOUTON TÉLÉCHARGER EN PDF
+   ============================================================ */
+
+.print-action-bar {
+  display:         flex;
+  justify-content: flex-end;
+  margin-bottom:   var(--sp-4);
+}
+
+.print-btn {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             var(--sp-2);
+  padding:         var(--sp-2) var(--sp-4);
+  border:          1px solid var(--bn-cyan);
+  border-radius:   var(--r-md);
+  background:      transparent;
+  color:           var(--bn-cyan);
+  font-family:     var(--font-body);
+  font-size:       0.78rem;
+  font-weight:     600;
+  cursor:          pointer;
+  transition:      background-color var(--t-normal),
+                   color            var(--t-normal),
+                   box-shadow       var(--t-normal);
+  letter-spacing:  0.02em;
+}
+
+.print-btn:hover {
+  background-color: var(--bn-cyan);
+  color:            #0b1220;
+  box-shadow:       0 0 16px rgba(34, 211, 238, 0.25);
+}
+
+.print-btn svg {
+  flex-shrink: 0;
+}
+
+/* Mode clair */
+[data-md-color-scheme="default"] .print-btn {
+  border-color: var(--bn-cyan-deep);
+  color:        var(--bn-cyan-deep);
+}
+
+[data-md-color-scheme="default"] .print-btn:hover {
+  background-color: var(--bn-cyan-deep);
+  color:            #ffffff;
+  box-shadow:       0 0 12px rgba(14, 116, 144, 0.2);
+}
+
+/* ============================================================
+   IMPRESSION / EXPORT PDF  (@media print)
+   ============================================================ */
+
+@media print {
+  /* Masquer tout ce qui n'est pas le contenu */
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-search,
+  .md-top,
+  .print-action-bar,
+  .md-content__button,
+  [data-md-component="announce"],
+  .md-dialog {
+    display: none !important;
+  }
+
+  /* Fond blanc, texte noir pour l'impression */
+  body,
+  .md-main,
+  .md-content,
+  .md-typeset {
+    background: #ffffff !important;
+    color:      #000000 !important;
+  }
+
+  /* Largeur maximale et marges propres */
+  .md-content__inner {
+    max-width:  100% !important;
+    margin:     0 !important;
+    padding:    0 !important;
+  }
+
+  .md-main__inner {
+    margin-top: 0 !important;
+  }
+
+  /* Typographie d'impression */
+  .md-typeset {
+    font-size:   11pt !important;
+    line-height: 1.6 !important;
+  }
+
+  .md-typeset h1 { font-size: 22pt !important; }
+  .md-typeset h2 { font-size: 16pt !important; border-bottom: 1pt solid #ccc !important; }
+  .md-typeset h3 { font-size: 13pt !important; }
+
+  /* Blocs de code — fond gris clair lisible à l'impression */
+  .md-typeset pre > code,
+  .md-typeset code {
+    background-color: #f4f4f4 !important;
+    color:            #1a1a1a !important;
+    border:           1pt solid #ddd !important;
+    font-size:        9pt !important;
+  }
+
+  /* Tableaux — bordures visibles */
+  .md-typeset table:not([class]) {
+    border-collapse: collapse !important;
+  }
+
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    border:  1pt solid #ccc !important;
+    padding: 4pt 6pt !important;
+    color:   #000000 !important;
+  }
+
+  .md-typeset table:not([class]) th {
+    background-color: #f0f0f0 !important;
+  }
+
+  /* Admonitions — fond blanc + bordure gauche colorée */
+  .md-typeset .admonition,
+  .md-typeset details {
+    background-color: #f9f9f9 !important;
+    border-left-width: 3pt !important;
+    break-inside: avoid;
+  }
+
+  .md-typeset .admonition-title,
+  .md-typeset summary {
+    color: #000000 !important;
+  }
+
+  /* Éviter les coupures de page dans les blocs */
+  .md-typeset pre,
+  .md-typeset table,
+  .md-typeset .admonition {
+    break-inside: avoid;
+  }
+
+  /* Liens — afficher l'URL entre parenthèses */
+  .md-typeset a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+  }
+
+  /* Mais pas pour les liens internes ni les ancres */
+  .md-typeset a[href^="#"]::after,
+  .md-typeset a[href^="/"]::after,
+  .md-typeset a.headerlink::after {
+    content: none;
+  }
+
+  /* Mermaid — ne pas casser les diagrammes */
+  .mermaid {
+    break-inside: avoid;
+  }
+
+  /* Marges de page */
+  @page {
+    margin: 20mm 15mm;
+    size: A4;
+  }
+}
+

@@ -1,3 +1,12 @@
+---
+description: Installer Docker sur Ubuntu, gérer images et conteneurs, configurer le réseau, écrire un Dockerfile, orchestrer avec Docker Compose.
+tags:
+  - Docker
+  - Linux
+  - Conteneurisation
+  - DevOps
+---
+
 # Docker
 
 ## Prérequis

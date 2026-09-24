@@ -1,3 +1,13 @@
+---
+description: Configurer le PAT sur un routeur Cisco pour partager une adresse publique, et exposer un serveur interne via NAT statique ou redirection de port.
+tags:
+  - Cisco
+  - Réseau
+  - NAT
+  - PAT
+  - Sécurité
+---
+
 # NAT et PAT
 
 ## Contexte
