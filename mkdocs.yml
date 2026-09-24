@@ -80,16 +80,7 @@ markdown_extensions:
 plugins:
   - search:
       lang: fr
-  - tags:
-      tags_file: tags.md
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: date
-      locale: fr
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
+  - tags
   - i18n:
       languages:
         - locale: fr
@@ -117,6 +108,14 @@ plugins:
             Mémos: Cheat sheets
             Mémo Cisco IOS: Cisco IOS cheat sheet
             Mémo Netplan: Netplan cheat sheet
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      locale: fr
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
 
 nav:
   - Accueil:
