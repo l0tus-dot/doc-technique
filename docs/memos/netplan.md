@@ -1,10 +1,5 @@
 ---
 description: Configurer le réseau sur Ubuntu Server avec Netplan — adressage statique, DHCP, dual-homed, netplan try et retour arrière.
-tags:
-  - Linux
-  - Réseau
-  - Ubuntu
-  - Mémo
 ---
 
 # Mémo Netplan

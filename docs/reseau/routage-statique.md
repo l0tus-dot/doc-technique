@@ -1,9 +1,5 @@
 ---
 description: Configurer des routes statiques entre deux LAN sur des routeurs Cisco IOS, avec route par défaut et plan de retour arrière.
-tags:
-  - Cisco
-  - Réseau
-  - Routage
 ---
 
 # Routage statique

@@ -1,11 +1,5 @@
 ---
 description: Configuration des listes de contrôle d'accès (ACL standard, étendue, nommée) sur routeur Cisco IOS — filtrage L3/L4, masques génériques, séquençage et sécurisation VTY.
-tags:
-  - Cisco
-  - Réseau
-  - Sécurité
-  - ACL
-  - Pare-feu
 ---
 
 # Listes de contrôle d'accès (ACL Cisco)

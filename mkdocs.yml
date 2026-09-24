@@ -80,7 +80,6 @@ markdown_extensions:
 plugins:
   - search:
       lang: fr
-  - tags
   - i18n:
       languages:
         - locale: fr
@@ -92,7 +91,6 @@ plugins:
             Accueil: Home
             Conventions: Conventions
             Gabarit: Template
-            Tags: Tags
             Projets transverses: Cross-cutting projects
             Réseau: Network
             Routage statique: Static routing
@@ -124,7 +122,6 @@ nav:
       - index.md
       - conventions.md
       - gabarit.md
-      - tags.md
   - Projets transverses:
       - projets-transverses/index.md
   - Réseau:

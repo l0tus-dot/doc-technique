@@ -1,10 +1,5 @@
 ---
 description: Activer RIPv2 entre routeurs Cisco, configurer no auto-summary, passive-interface, injection de route par défaut et authentification MD5.
-tags:
-  - Cisco
-  - Réseau
-  - Routage
-  - RIP
 ---
 
 # Routage dynamique — RIP version 2
