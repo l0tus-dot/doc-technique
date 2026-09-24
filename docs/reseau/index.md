@@ -12,11 +12,12 @@ Pour la conteneurisation, voir la section [Conteneurisation / DevOps](../contene
 
 Pour les pannes qui ne sont pas propres à une procédure précise, voir [Dépannage réseau](../depannage/index.md).
 
+Pour les listes de contrôle d'accès et le filtrage de sécurité, voir [Listes de contrôle d'accès (ACL Cisco)](../securite/cisco-acl.md) dans la section Cybersécurité.
+
 ## À rédiger
 
 - [ ] VLAN et liaison trunk (802.1Q)
 - [ ] Routage inter-VLAN sur bâton
 - [ ] OSPF aire unique
-- [ ] Listes de contrôle d'accès standard et étendues
 - [ ] Relais DHCP (`ip helper-address`)
 - [ ] Agrégation de liens (EtherChannel)

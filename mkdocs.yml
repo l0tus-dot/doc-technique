@@ -103,13 +103,15 @@ plugins:
             Dépannage réseau: Network troubleshooting
             Systèmes: Systems
             Cybersécurité: Cybersecurity
+            Listes de contrôle d'accès (ACL Cisco): Access Control Lists (Cisco ACL)
             Délégation de droits avec sudo: Privilege delegation with sudo
             Services: Services
             Mémos: Cheat sheets
             Mémo Cisco IOS: Cisco IOS cheat sheet
             Mémo Netplan: Netplan cheat sheet
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: false
+      fallback_to_build_date: true
       type: date
       locale: fr
   - minify:
@@ -139,6 +141,7 @@ nav:
       - systemes/index.md
   - Cybersécurité:
       - securite/index.md
+      - securite/cisco-acl.md
       - securite/sudo-delegation.md
   - Services:
       - services/index.md
