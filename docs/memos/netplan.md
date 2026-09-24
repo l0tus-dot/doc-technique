@@ -43,7 +43,7 @@ network:
   ethernets:
     ens160:
       dhcp4: false
-      addresses: [100.115.29.11/27]
+      addresses: [100.115.29.11-15/27]
       routes:
         - to: default
           via: 192.168.10.1
