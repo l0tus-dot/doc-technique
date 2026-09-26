@@ -29,7 +29,7 @@ Usages principaux : cloisonnement inter-réseaux, restriction d'accès SSH, sél
 
 ## Masque générique (Wildcard)
 
-$$\text{Wildcard} = 255.255.255.255 - \text{Masque de sous-réseau}$$
+> **Formule :** `Masque générique` = `255.255.255.255` − `Masque de sous-réseau`
 
 | CIDR | Wildcard | Raccourci IOS |
 |---|---|---|
