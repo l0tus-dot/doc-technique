@@ -34,16 +34,16 @@ Le YAML est sensible à l'indentation : **espaces uniquement**, jamais de tabula
 
 ```yaml
 network:
-  version: 2
   ethernets:
     ens160:
       dhcp4: false
-      addresses: [100.115.29.11-15/27]
-      routes:
+      addresses: [100.115.29.11-15/23]
+      route:
         - to: default
-          via: 192.168.10.1
+          via: 100.115.29.254
       nameservers:
-        addresses: [100.115.28.41, 100.115.29.42]
+        addresses: [100.115.28.41, 100.115.28.42]
+  version: 2
 ```
 
 ### Adressage DHCP

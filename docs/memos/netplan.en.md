@@ -28,12 +28,12 @@ network:
   ethernets:
     ens160:
       dhcp4: false
-      addresses: [100.115.29.11/23]
-      routes:
+      addresses: [100.115.29.11-15/23]
+      route:
         - to: default
           via: 100.115.29.254
       nameservers:
-        addresses: [100.115.28.41, 100.11.29.41]
+        addresses: [100.115.28.41, 100.115.28.42]
   version: 2
 ```
 
