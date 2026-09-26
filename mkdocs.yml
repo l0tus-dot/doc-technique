@@ -122,24 +122,23 @@ nav:
       - index.md
       - conventions.md
       - gabarit.md
-  - Projets transverses:
-      - projets-transverses/index.md
   - Réseau:
       - reseau/index.md
       - reseau/routage-statique.md
       - reseau/rip-v2.md
       - reseau/nat-pat.md
-  - Conteneurisation / DevOps:
-      - conteneurisation/index.md
-      - conteneurisation/docker.md
-  - Dépannage réseau:
       - depannage/index.md
   - Systèmes:
       - systemes/index.md
+      - Conteneurisation / DevOps:
+          - conteneurisation/index.md
+          - conteneurisation/docker.md
   - Cybersécurité:
       - securite/index.md
       - securite/cisco-acl.md
       - securite/sudo-delegation.md
+  - Projets transverses:
+      - projets-transverses/index.md
   - Services:
       - services/index.md
   - Mémos:

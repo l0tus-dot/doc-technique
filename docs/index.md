@@ -6,29 +6,29 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
 <div class="grid cards" markdown>
 
--   __Projets transverses__
-
-    Architectures complètes combinant plusieurs briques — la vision globale, pas une technologie isolée.
-
-    [Ouvrir la section](projets-transverses/index.md)
-
 -   __Réseau__
 
-    Routage, NAT/PAT, VLAN, ACL. Les commandes Cisco IOS et leurs équivalents Linux.
+    Routage, NAT/PAT, VLAN, ACL et méthode de dépannage réseau par couche.
 
     [Ouvrir la section](reseau/index.md)
 
 -   __Systèmes__
 
-    Windows Server (AD DS, DNS, DHCP, GPO) et Ubuntu Server.
+    Administration Windows Server, Ubuntu Server et conteneurisation Docker / DevOps.
 
     [Ouvrir la section](systemes/index.md)
 
 -   __Cybersécurité__
 
-    pfSense, WireGuard, durcissement, délégation de droits.
+    Filtrage par ACL Cisco, pfSense, WireGuard, durcissement et délégation de privilèges avec sudo.
 
     [Ouvrir la section](securite/index.md)
+
+-   __Projets transverses__
+
+    Architectures complètes combinant plusieurs briques — la vision globale, pas une technologie isolée.
+
+    [Ouvrir la section](projets-transverses/index.md)
 
 -   __Services__
 
@@ -36,17 +36,11 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
     [Ouvrir la section](services/index.md)
 
--   __Conteneurisation / DevOps__
+-   __Mémos__
 
-    Docker : installation, réseau, images, conteneurs.
+    Aide-mémoire synthétiques des commandes Cisco IOS et Netplan.
 
-    [Ouvrir la section](conteneurisation/index.md)
-
--   __Dépannage réseau__
-
-    Pannes fréquentes classées par couche, avec leur résolution.
-
-    [Ouvrir la section](depannage/index.md)
+    [Ouvrir la section](memos/cisco-ios.md)
 
 </div>
 
