@@ -7,10 +7,11 @@ Configuring interconnection devices: routing, address translation, segmentation,
 - [Static routing](routage-statique.md) — interconnecting two LANs, default route, administrative distance
 - [RIP version 2](rip-v2.md) — dynamic routing, no auto-summary, default route, authentication
 - [NAT and PAT](nat-pat.md) — getting the LAN out behind a public address, publishing a server
+- [Network troubleshooting](../depannage/index.md) — methodology by layer and common failure diagnostics
 
-For containerization, see the [Containerization / DevOps](../conteneurisation/index.md) section.
+For containerization and Docker, see the [Systems](../systemes/index.md) section.
 
-For issues that aren't specific to a given procedure, see [Network troubleshooting](../depannage/index.md).
+For access control lists and security filtering, see [Access Control Lists (Cisco ACL)](../securite/cisco-acl.md) in the Cybersecurity section.
 
 ## To be written
 

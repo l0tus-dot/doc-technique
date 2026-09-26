@@ -6,29 +6,29 @@ The procedures I apply in labs, on internships, and in my homelab: network confi
 
 <div class="grid cards" markdown>
 
--   __Cross-cutting projects__
-
-    Complete architectures combining several building blocks — the overall vision, not a single technology.
-
-    [Open the section](projets-transverses/index.md)
-
 -   __Network__
 
-    Routing, NAT/PAT, VLAN, ACL. Cisco IOS commands and their Linux equivalents.
+    Routing, NAT/PAT, VLAN, ACL, and network troubleshooting methodology by layer.
 
     [Open the section](reseau/index.md)
 
 -   __Systems__
 
-    Windows Server (AD DS, DNS, DHCP, GPO) and Ubuntu Server.
+    Windows Server, Ubuntu Server administration, and Docker / DevOps containerization.
 
     [Open the section](systemes/index.md)
 
 -   __Cybersecurity__
 
-    pfSense, WireGuard, hardening, privilege delegation.
+    Cisco ACL filtering, pfSense, WireGuard, hardening, and privilege delegation with sudo.
 
     [Open the section](securite/index.md)
+
+-   __Cross-cutting projects__
+
+    Complete architectures combining several building blocks — the overall vision, not a single technology.
+
+    [Open the section](projets-transverses/index.md)
 
 -   __Services__
 
@@ -36,17 +36,11 @@ The procedures I apply in labs, on internships, and in my homelab: network confi
 
     [Open the section](services/index.md)
 
--   __Containerization / DevOps__
+-   __Cheat sheets__
 
-    Docker: installation, networking, images, containers.
+    Concise cheat sheets for Cisco IOS and Netplan commands.
 
-    [Open the section](conteneurisation/index.md)
-
--   __Network troubleshooting__
-
-    Common issues sorted by layer, with their resolution.
-
-    [Open the section](depannage/index.md)
+    [Open the section](memos/cisco-ios.md)
 
 </div>
 

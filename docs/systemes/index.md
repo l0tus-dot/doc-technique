@@ -7,7 +7,6 @@ Administration des serveurs Windows, Linux et conteneurisation d'applications.
 ### Conteneurisation / DevOps
 
 - [Docker](../conteneurisation/docker.md) — installation, conteneurs, images, réseaux, volumes, Dockerfile et Compose
-- [Conteneurisation / DevOps (vue d'ensemble)](../conteneurisation/index.md) — concepts et feuille de route devops
 
 ## À rédiger
 

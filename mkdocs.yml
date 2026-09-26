@@ -96,7 +96,6 @@ plugins:
             Routage statique: Static routing
             Routage dynamique — RIP version 2: Dynamic routing — RIP v2
             NAT et PAT: NAT and PAT
-            Conteneurisation / DevOps: Containerization / DevOps
             Docker: Docker
             Dépannage réseau: Network troubleshooting
             Systèmes: Systems
@@ -130,9 +129,7 @@ nav:
       - depannage/index.md
   - Systèmes:
       - systemes/index.md
-      - Conteneurisation / DevOps:
-          - conteneurisation/index.md
-          - conteneurisation/docker.md
+      - conteneurisation/docker.md
   - Cybersécurité:
       - securite/index.md
       - securite/cisco-acl.md
