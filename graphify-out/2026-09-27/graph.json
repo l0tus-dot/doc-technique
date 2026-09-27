@@ -1,0 +1,409 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "network_configuration_flow",
+        "label": "Network Configuration & Troubleshooting",
+        "nodes": [
+          "docs_reseau_routage_statique_md",
+          "docs_reseau_rip_v2_md",
+          "docs_reseau_nat_pat_md",
+          "docs_depannage_index_md"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.9,
+        "source_file": "docs/reseau/index.md"
+      },
+      {
+        "id": "sudo_security_best_practices",
+        "label": "Sudo Security Best Practices",
+        "nodes": [
+          "concept_sudo_noexec",
+          "concept_sudo_visudo",
+          "concept_sudo_aliases"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.9,
+        "source_file": "docs/securite/sudo-delegation.en.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "concept_sudo_aliases",
+      "label": "Sudoers Aliases",
+      "_origin": "semantic",
+      "community": 0,
+      "file_type": "concept",
+      "norm_label": "sudoers aliases",
+      "rationale": "Grouping users, hosts, and commands for cleaner configuration.",
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    },
+    {
+      "id": "concept_sudo_noexec",
+      "label": "NOEXEC Security Option",
+      "_origin": "semantic",
+      "community": 0,
+      "file_type": "concept",
+      "norm_label": "noexec security option",
+      "rationale": "Prevents commands from spawning subshells to avoid privilege escalation.",
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    },
+    {
+      "id": "concept_sudo_visudo",
+      "label": "visudo Utility",
+      "_origin": "semantic",
+      "community": 0,
+      "file_type": "concept",
+      "norm_label": "visudo utility",
+      "rationale": "Recommended tool for editing sudoers to prevent syntax errors and concurrent edits.",
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    },
+    {
+      "id": "docs_securite_sudo_delegation_en_md",
+      "label": "Privilege delegation with sudo",
+      "_origin": "semantic",
+      "community": 0,
+      "file_type": "document",
+      "norm_label": "privilege delegation with sudo",
+      "rationale": "Documentation on sudo configuration, security risks, and best practices.",
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    },
+    {
+      "id": "docs_securite_sudo_delegation_md",
+      "label": "D\u00e9l\u00e9gation de droits avec sudo",
+      "_origin": "semantic",
+      "community": 0,
+      "file_type": "document",
+      "norm_label": "delegation de droits avec sudo",
+      "rationale": "French version of the sudo delegation documentation.",
+      "source_file": "docs/securite/sudo-delegation.md"
+    },
+    {
+      "id": "docs_services_index_md",
+      "label": "Services Index (FR)",
+      "_origin": "semantic",
+      "community": 10,
+      "file_type": "document",
+      "norm_label": "services index (fr)",
+      "source_file": "docs/services/index.md"
+    },
+    {
+      "id": "docs_systemes_index_en_md",
+      "label": "Systems Index (EN)",
+      "_origin": "semantic",
+      "community": 11,
+      "file_type": "document",
+      "norm_label": "systems index (en)",
+      "source_file": "docs/systemes/index.en.md"
+    },
+    {
+      "id": "docs_systemes_index_md",
+      "label": "Systems Index (FR)",
+      "_origin": "semantic",
+      "community": 12,
+      "file_type": "document",
+      "norm_label": "systems index (fr)",
+      "source_file": "docs/systemes/index.md"
+    },
+    {
+      "id": "overrides_main_html",
+      "label": "Main Template Override",
+      "_origin": "semantic",
+      "community": 13,
+      "file_type": "code",
+      "norm_label": "main template override",
+      "rationale": "Adds a PDF download/print button to non-homepage pages.",
+      "source_file": "overrides/main.html",
+      "verification": "unverified"
+    },
+    {
+      "id": "overrides_partials_source_file_html",
+      "label": "Source File Partial Override",
+      "_origin": "semantic",
+      "community": 14,
+      "file_type": "code",
+      "norm_label": "source file partial override",
+      "rationale": "Customizes git revision date formatting in the UI.",
+      "source_file": "overrides/partials/source-file.html"
+    },
+    {
+      "id": "docs_services_index_en_md",
+      "label": "Services Index (EN)",
+      "_origin": "semantic",
+      "community": 9,
+      "file_type": "document",
+      "norm_label": "services index (en)",
+      "source_file": "docs/services/index.en.md"
+    },
+    {
+      "id": "docs_reseau_nat_pat_md",
+      "label": "NAT et PAT",
+      "community": 1,
+      "file_type": "document",
+      "norm_label": "nat et pat",
+      "source_file": "docs/reseau/nat-pat.md"
+    },
+    {
+      "id": "docs_reseau_rip_v2_md",
+      "label": "RIP version 2",
+      "community": 1,
+      "file_type": "document",
+      "norm_label": "rip version 2",
+      "source_file": "docs/reseau/rip-v2.md"
+    },
+    {
+      "id": "docs_reseau_routage_statique_md",
+      "label": "Routage statique",
+      "community": 1,
+      "file_type": "document",
+      "norm_label": "routage statique",
+      "source_file": "docs/reseau/routage-statique.md"
+    },
+    {
+      "id": "docs_securite_cisco_acl_md",
+      "label": "ACL Cisco",
+      "community": 1,
+      "file_type": "document",
+      "norm_label": "acl cisco",
+      "source_file": "docs/securite/cisco-acl.md"
+    },
+    {
+      "id": "mkdocs_yml",
+      "label": "mkdocs.yml",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "mkdocs.yml",
+      "source_file": "mkdocs.yml",
+      "verification": "unverified"
+    },
+    {
+      "id": "concept_bts_sio_sisr",
+      "label": "BTS SIO SISR",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "bts sio sisr",
+      "source_file": "README.md"
+    },
+    {
+      "id": "docs_index_md",
+      "label": "Accueil",
+      "community": 2,
+      "file_type": "document",
+      "norm_label": "accueil",
+      "source_file": "docs/index.md"
+    },
+    {
+      "id": "docs_depannage_index_md",
+      "label": "D\u00e9pannage r\u00e9seau",
+      "community": 3,
+      "file_type": "document",
+      "norm_label": "depannage reseau",
+      "source_file": "docs/depannage/index.md"
+    },
+    {
+      "id": "docs_memos_cisco_ios_md",
+      "label": "M\u00e9mo Cisco IOS",
+      "community": 3,
+      "file_type": "document",
+      "norm_label": "memo cisco ios",
+      "source_file": "docs/memos/cisco-ios.md"
+    },
+    {
+      "id": "github_workflows_deploy_yml",
+      "label": "GitHub Pages Deployment",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "github pages deployment",
+      "source_file": ".github/workflows/deploy.yml"
+    },
+    {
+      "id": "requirements_txt",
+      "label": "requirements.txt",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "requirements.txt",
+      "source_file": "requirements.txt",
+      "verification": "unverified"
+    },
+    {
+      "id": "docs_conteneurisation_docker_md",
+      "label": "Docker",
+      "community": 5,
+      "file_type": "document",
+      "norm_label": "docker",
+      "source_file": "docs/conteneurisation/docker.md"
+    },
+    {
+      "id": "docs_conventions_md",
+      "label": "Conventions",
+      "community": 6,
+      "file_type": "document",
+      "norm_label": "conventions",
+      "source_file": "docs/conventions.md"
+    },
+    {
+      "id": "docs_gabarit_md",
+      "label": "Gabarit de fiche",
+      "community": 7,
+      "file_type": "document",
+      "norm_label": "gabarit de fiche",
+      "source_file": "docs/gabarit.md"
+    },
+    {
+      "id": "docs_memos_netplan_md",
+      "label": "M\u00e9mo Netplan",
+      "community": 8,
+      "file_type": "document",
+      "norm_label": "memo netplan",
+      "source_file": "docs/memos/netplan.md"
+    }
+  ],
+  "links": [
+    {
+      "source": "docs_securite_sudo_delegation_en_md",
+      "target": "concept_sudo_noexec",
+      "relation": "conceptually_related_to",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    },
+    {
+      "source": "docs_securite_sudo_delegation_md",
+      "target": "concept_sudo_noexec",
+      "relation": "conceptually_related_to",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/securite/sudo-delegation.md"
+    },
+    {
+      "source": "docs_securite_sudo_delegation_en_md",
+      "target": "concept_sudo_aliases",
+      "relation": "references",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    },
+    {
+      "source": "docs_securite_sudo_delegation_en_md",
+      "target": "concept_sudo_visudo",
+      "relation": "references",
+      "_origin": "semantic",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    },
+    {
+      "source": "docs_securite_sudo_delegation_en_md",
+      "target": "docs_securite_sudo_delegation_md",
+      "relation": "semantically_similar_to",
+      "_origin": "semantic",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    },
+    {
+      "source": "docs_reseau_rip_v2_md",
+      "target": "docs_reseau_routage_statique_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "rationale": "Prerequisites mention disabling static routing.",
+      "source_file": "docs/reseau/rip-v2.md"
+    },
+    {
+      "source": "docs_reseau_routage_statique_md",
+      "target": "docs_reseau_nat_pat_md",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "rationale": "The troubleshooting section explicitly references NAT/PAT dependencies.",
+      "source_file": "docs/reseau/routage-statique.md"
+    },
+    {
+      "source": "docs_depannage_index_md",
+      "target": "docs_memos_cisco_ios_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/depannage/index.md"
+    },
+    {
+      "source": "docs_securite_cisco_acl_md",
+      "target": "docs_reseau_nat_pat_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/securite/cisco-acl.md"
+    },
+    {
+      "source": "github_workflows_deploy_yml",
+      "target": "requirements_txt",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/deploy.yml"
+    },
+    {
+      "source": "mkdocs_yml",
+      "target": "docs_index_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mkdocs.yml"
+    },
+    {
+      "source": "mkdocs_yml",
+      "target": "docs_reseau_routage_statique_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mkdocs.yml"
+    },
+    {
+      "source": "docs_index_md",
+      "target": "concept_bts_sio_sisr",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/index.md"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "network_configuration_flow",
+      "label": "Network Configuration & Troubleshooting",
+      "nodes": [
+        "docs_reseau_routage_statique_md",
+        "docs_reseau_rip_v2_md",
+        "docs_reseau_nat_pat_md",
+        "docs_depannage_index_md"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "docs/reseau/index.md"
+    },
+    {
+      "id": "sudo_security_best_practices",
+      "label": "Sudo Security Best Practices",
+      "nodes": [
+        "concept_sudo_noexec",
+        "concept_sudo_visudo",
+        "concept_sudo_aliases"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "docs/securite/sudo-delegation.en.md"
+    }
+  ],
+  "built_at_commit": "b51d7c5819e7c14698ce48e0863c884d8d3b7959"
+}

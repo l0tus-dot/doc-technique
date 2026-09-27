@@ -1,0 +1,1 @@
+{"nodes": [], "edges": [], "hyperedges": [{"id": "network_configuration_flow", "label": "Network Configuration & Troubleshooting", "nodes": ["docs_reseau_routage_statique_md", "docs_reseau_rip_v2_md", "docs_reseau_nat_pat_md", "docs_depannage_index_md"], "relation": "participate_in", "confidence": "EXTRACTED", "confidence_score": 0.9, "source_file": "docs/reseau/index.md"}]}

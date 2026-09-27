@@ -1,0 +1,1 @@
+{"nodes": [{"id": "docs_systemes_index_md", "label": "Systems Index (FR)", "file_type": "document", "source_file": "docs/systemes/index.md"}], "edges": [{"source": "docs_systemes_index_md", "target": "docs_conteneurisation_docker_md", "relation": "references", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "docs/systemes/index.md"}], "hyperedges": []}

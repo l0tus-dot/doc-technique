@@ -1,0 +1,1 @@
+{"nodes": [{"id": "overrides_partials_source_file_html", "label": "Source File Partial Override", "file_type": "code", "source_file": "overrides/partials/source-file.html", "rationale": "Customizes git revision date formatting in the UI."}], "edges": [], "hyperedges": []}

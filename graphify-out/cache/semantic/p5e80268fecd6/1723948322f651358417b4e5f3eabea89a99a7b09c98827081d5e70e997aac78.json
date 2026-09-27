@@ -1,0 +1,1 @@
+{"nodes": [{"id": "docs_index_md", "label": "Accueil", "file_type": "document", "source_file": "docs/index.md"}], "edges": [{"source": "docs_index_md", "target": "concept_bts_sio_sisr", "relation": "conceptually_related_to", "confidence": "INFERRED", "confidence_score": 0.95, "source_file": "docs/index.md"}], "hyperedges": []}

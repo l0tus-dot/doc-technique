@@ -1,0 +1,1 @@
+{"nodes": [{"id": "docs_securite_cisco_acl_md", "label": "ACL Cisco", "file_type": "document", "source_file": "docs/securite/cisco-acl.md"}], "edges": [{"source": "docs_securite_cisco_acl_md", "target": "docs_reseau_nat_pat_md", "relation": "references", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "docs/securite/cisco-acl.md"}], "hyperedges": []}
