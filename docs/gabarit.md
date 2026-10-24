@@ -129,3 +129,53 @@ Les [conventions d'écriture](conventions.md) détaillent les notations utilisé
 !!! danger "Titre"      → action irréversible ou destructrice
 ??? note "Titre"        → note repliée (même types disponibles)
 ```
+
+---
+
+## Gabarit de projet
+
+Une fiche qui combine plusieurs briques (une architecture complète plutôt qu'une procédure unique) suit une structure différente de celle ci-dessus — copier le bloc suivant pour démarrer une nouvelle fiche de projet. Une fiche de projet ne réexplique pas chaque brique en détail : elle renvoie vers la fiche unitaire correspondante quand elle existe, et se concentre sur ce qu'une fiche unitaire ne peut pas montrer — pourquoi cette architecture, dans quel ordre la construire, et surtout où les briques se touchent.
+
+````markdown
+# Titre du projet
+
+## Contexte métier
+
+Le besoin auquel répond cette architecture, en une situation concrète — pas une liste de technologies.
+
+## Architecture globale
+
+```mermaid
+flowchart LR
+    Client["Poste client"]
+    FW((Pare-feu))
+    SRV["Serveur"]
+
+    Client --- FW
+    FW --- SRV
+```
+
+Un paragraphe par zone du schéma : ce qu'elle contient, ce qui la sépare des autres.
+
+## Composants et rôle de chacun
+
+| Composant | Rôle | Fiche détaillée |
+|---|---|---|
+| | | |
+
+## Séquencement du déploiement
+
+1. Étape, et pourquoi elle doit précéder la suivante.
+
+## Points d'intégration critiques
+
+Ce qui ne fonctionne que si les briques sont correctement raccordées entre elles : règles de pare-feu qui laissent passer un flux précis, résolution de noms qui traverse une frontière réseau, route retour, authentification partagée ou volontairement séparée.
+
+## Vérification de bout en bout
+
+Un test qui traverse toute la chaîne, pas brique par brique.
+
+## Plan de retour arrière global
+
+L'ordre dans lequel désactiver chaque brique sans casser les autres.
+````

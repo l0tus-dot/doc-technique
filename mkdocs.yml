@@ -88,18 +88,16 @@ plugins:
             Accueil: Home
             Conventions: Conventions
             Gabarit: Template
-            Projets transverses: Cross-cutting projects
             Réseau: Network
             Routage statique: Static routing
             Routage dynamique — RIP version 2: Dynamic routing — RIP v2
             NAT et PAT: NAT and PAT
+            Conteneurisation: Containerization
             Docker: Docker
             Dépannage réseau: Network troubleshooting
-            Systèmes: Systems
             Cybersécurité: Cybersecurity
             Listes de contrôle d'accès (ACL Cisco): Access Control Lists (Cisco ACL)
             Délégation de droits avec sudo: Privilege delegation with sudo
-            Services: Services
             Mémos: Cheat sheets
             Mémo Cisco IOS: Cisco IOS cheat sheet
             Mémo Netplan: Netplan cheat sheet
@@ -121,17 +119,12 @@ nav:
       - reseau/rip-v2.md
       - reseau/nat-pat.md
       - depannage/index.md
-  - Systèmes:
-      - systemes/index.md
+  - Conteneurisation:
       - conteneurisation/docker.md
   - Cybersécurité:
       - securite/index.md
       - securite/cisco-acl.md
       - securite/sudo-delegation.md
-  - Projets transverses:
-      - projets-transverses/index.md
-  - Services:
-      - services/index.md
   - Mémos:
       - memos/cisco-ios.md
       - memos/netplan.md

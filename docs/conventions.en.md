@@ -50,7 +50,7 @@ In a production environment, every change comes with an undo plan. Every page th
 
 ## Cross-cutting project pages
 
-A page combining several distinct building blocks doesn't follow the template above: it documents the architecture and its integration points, not a single procedure. Structure and template in [Cross-cutting projects](projets-transverses/index.md).
+A page combining several distinct building blocks doesn't follow the template above: it documents the architecture and its integration points, not a single procedure. Structure and project template in the [template](gabarit.md#project-template).
 
 ## File naming
 

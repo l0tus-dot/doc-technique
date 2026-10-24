@@ -1,0 +1,35 @@
+Backlog — hors navigation du site
+
+Ces sections n'ont pas encore de contenu rédigé, donc elles ne sont plus dans le menu
+(voir superpowers/specs/2026-10-24-refonte-wiki-design.md). À réintégrer dans mkdocs.yml
+dès qu'une fiche existe réellement dans chacune.
+
+Systèmes — Windows Server :
+- Promotion d'un contrôleur de domaine AD DS
+- Zones DNS directe et inversée
+- Étendue DHCP et réservations
+- Stratégies de groupe : lecteurs réseau, restrictions
+- Partages et permissions NTFS
+
+Systèmes — Linux :
+- Installation d'Ubuntu Server et adressage par Netplan
+- Durcissement SSH et authentification par clé
+- Services systemd : création d'une unité
+- Tâches planifiées avec cron et timers systemd
+- Sauvegarde avec rsync
+
+Conteneurisation :
+- Commandes Docker Compose (fichier onecloud)
+
+Services :
+- NetBox : inventaire des équipements et gestion des préfixes IP
+- Pi-hole : filtrage DNS et listes de blocage
+- Nginx Proxy Manager : reverse proxy et certificats Let's Encrypt
+- VirtualBox : modes réseau et configuration d'une maquette
+- Supervision : métriques et alertes
+
+Projets transverses (gabarit récupéré dans docs/gabarit.md) :
+- Portail web interne en HTTPS : Nginx Proxy Manager, certificats automatiques, résolution interne via Pi-hole
+- Inventaire et documentation d'infrastructure : NetBox comme source de vérité, alimenté par le déploiement réel
+- Zone DMZ : segmentation pare-feu, relais DNS, filtrage applicatif pour un service exposé
+- Conteneurs en production : ferme Docker derrière un reverse proxy, sauvegarde et supervision

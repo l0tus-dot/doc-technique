@@ -12,29 +12,17 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
     [Ouvrir la section](reseau/index.md)
 
--   __Systèmes__
+-   __Conteneurisation__
 
-    Administration Windows Server, Ubuntu Server et conteneurisation Docker / DevOps.
+    Docker : installation, conteneurs, images, réseaux, volumes, Dockerfile et Compose.
 
-    [Ouvrir la section](systemes/index.md)
+    [Ouvrir la section](conteneurisation/docker.md)
 
 -   __Cybersécurité__
 
     Filtrage par ACL Cisco, pfSense, WireGuard, durcissement et délégation de privilèges avec sudo.
 
     [Ouvrir la section](securite/index.md)
-
--   __Projets transverses__
-
-    Architectures complètes combinant plusieurs briques — la vision globale, pas une technologie isolée.
-
-    [Ouvrir la section](projets-transverses/index.md)
-
--   __Services__
-
-    NetBox, Pi-hole, Nginx Proxy Manager, supervision.
-
-    [Ouvrir la section](services/index.md)
 
 -   __Mémos__
 
@@ -48,6 +36,6 @@ Les procédures que j'applique en TP, en stage et dans mon homelab : configurati
 
 Les fiches par technologie suivent la même structure : contexte, prérequis, topologie, procédure, plan de retour arrière, vérification, dépannage. La section **Vérification** donne la commande qui prouve que la configuration fonctionne — c'est elle qu'il faut lancer avant de considérer une manipulation terminée.
 
-Les fiches de [Projets transverses](projets-transverses/index.md) suivent une structure différente, pensée pour une architecture multi-briques plutôt qu'une procédure unique — voir leur page d'index.
+Une fiche qui combine plusieurs briques (une architecture complète plutôt qu'une procédure isolée) suit une structure différente — voir le gabarit de projet dans le [gabarit](gabarit.md).
 
-Les [conventions d'écriture](conventions.md) détaillent les notations utilisées. Le [gabarit](gabarit.md) sert de point de départ pour toute nouvelle fiche par technologie.
+Les [conventions d'écriture](conventions.md) détaillent les notations utilisées. Le [gabarit](gabarit.md) sert de point de départ pour toute nouvelle fiche.

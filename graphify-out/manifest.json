@@ -1,152 +1,242 @@
 {
   ".claude/settings.json": {
-    "mtime": 1790500871.9337912,
-    "seen": 1790501606.010433,
-    "ast_hash": "3ac995fbf93552a991ecab9b63f776aa",
-    "semantic_hash": "3ac995fbf93552a991ecab9b63f776aa"
+    "mtime": 1792843035.020601,
+    "seen": 1792844736.8032155,
+    "ast_hash": "3b541b9935fcf0831355da956f897645",
+    "semantic_hash": ""
   },
   "docs/securite/sudo-delegation.en.md": {
-    "mtime": 1790195117.8580828,
-    "seen": 1790501606.0104375,
+    "mtime": 1792843035.0764258,
+    "seen": 1792844736.8032718,
     "ast_hash": "17561a2fa400345c776d3defece63d81",
     "semantic_hash": "17561a2fa400345c776d3defece63d81"
   },
   "docs/securite/sudo-delegation.md": {
-    "mtime": 1790272035.1501634,
-    "seen": 1790501606.0104394,
+    "mtime": 1792843035.0790002,
+    "seen": 1792844736.8032734,
     "ast_hash": "957fa29492e407807371bf23267d7b4c",
     "semantic_hash": "957fa29492e407807371bf23267d7b4c"
   },
-  "docs/services/index.en.md": {
-    "mtime": 1790195117.8827126,
-    "seen": 1790501606.0104406,
-    "ast_hash": "ffe6a9273299b0e91273a9a18ac30233",
-    "semantic_hash": "ffe6a9273299b0e91273a9a18ac30233"
-  },
-  "docs/services/index.md": {
-    "mtime": 1790195117.8918288,
-    "seen": 1790501606.010442,
-    "ast_hash": "49c7cc1894364e224e0d5528ea18f642",
-    "semantic_hash": "49c7cc1894364e224e0d5528ea18f642"
-  },
-  "docs/systemes/index.en.md": {
-    "mtime": 1790445776.9730554,
-    "seen": 1790501606.010443,
-    "ast_hash": "10d92ce567367f86559c11f0f826f8ff",
-    "semantic_hash": "10d92ce567367f86559c11f0f826f8ff"
-  },
-  "docs/systemes/index.md": {
-    "mtime": 1790445741.680691,
-    "seen": 1790501606.0104444,
-    "ast_hash": "2614f9afc731667e529d252a4d1c8ab0",
-    "semantic_hash": "2614f9afc731667e529d252a4d1c8ab0"
-  },
   "overrides/main.html": {
-    "mtime": 1790268592.1712646,
-    "seen": 1790501606.0104454,
+    "mtime": 1792843035.1338415,
+    "seen": 1792844736.8032765,
     "ast_hash": "c8ed973a67a978c2344bd3c56801e3ad",
     "semantic_hash": "c8ed973a67a978c2344bd3c56801e3ad"
   },
   "overrides/partials/source-file.html": {
-    "mtime": 1790500487.3566313,
-    "seen": 1790501606.010446,
+    "mtime": 1792843035.1358552,
+    "seen": 1792844736.8032787,
     "ast_hash": "10379a4811a6bd8545ab8ab1b92a0a9d",
     "semantic_hash": "10379a4811a6bd8545ab8ab1b92a0a9d"
   },
   ".github/workflows/deploy.yml": {
-    "mtime": 1790199739.7048502,
-    "seen": 1790501665.8409348,
+    "mtime": 1792843035.0404165,
+    "seen": 1792844736.803226,
     "ast_hash": "5058aa27b0f8d5354824be3357843328",
     "semantic_hash": "5058aa27b0f8d5354824be3357843328"
   },
   "README.md": {
-    "mtime": 1790195117.4331458,
-    "seen": 1790501665.840938,
+    "mtime": 1792843035.0419729,
+    "seen": 1792844736.8032327,
     "ast_hash": "2e265a34c41035aa7c8b74cd32c4b61a",
     "semantic_hash": "2e265a34c41035aa7c8b74cd32c4b61a"
   },
   "docs/conteneurisation/docker.md": {
-    "mtime": 1790271985.8606331,
-    "seen": 1790501665.84094,
-    "ast_hash": "6ec003e408b2eb939186f8d2f139c24f",
-    "semantic_hash": "6ec003e408b2eb939186f8d2f139c24f"
+    "mtime": 1792843035.046729,
+    "seen": 1792844736.8032377,
+    "ast_hash": "9a84462b543e49ca23e6aac700313f3a",
+    "semantic_hash": ""
   },
   "docs/conventions.md": {
-    "mtime": 1790195117.5212574,
-    "seen": 1790501665.8409417,
-    "ast_hash": "c6dc88a66638242f763e53566daceca1",
-    "semantic_hash": "c6dc88a66638242f763e53566daceca1"
+    "mtime": 1792844629.5440652,
+    "seen": 1792844736.8032408,
+    "ast_hash": "f4dc046f01e0b8fad08bf6443700e16d",
+    "semantic_hash": ""
   },
   "docs/depannage/index.md": {
-    "mtime": 1790195117.6863565,
-    "seen": 1790501665.8409429,
+    "mtime": 1789673399.6499307,
+    "seen": 1792844736.8032444,
     "ast_hash": "0cfc9d1df2510bd658e947c63a43d1bd",
     "semantic_hash": "0cfc9d1df2510bd658e947c63a43d1bd"
   },
   "docs/gabarit.md": {
-    "mtime": 1790199394.2576814,
-    "seen": 1790501665.8409438,
-    "ast_hash": "516683b55f3fb1f1b296ecc0a9efc3b5",
-    "semantic_hash": "516683b55f3fb1f1b296ecc0a9efc3b5"
+    "mtime": 1792844653.4741015,
+    "seen": 1792844736.8032475,
+    "ast_hash": "e699c6380a1572c3e6d54be695deb74e",
+    "semantic_hash": ""
   },
   "docs/index.md": {
-    "mtime": 1790445238.6285694,
-    "seen": 1790501665.840945,
-    "ast_hash": "b621df6452a3b08b8f561a9febbb6314",
-    "semantic_hash": "b621df6452a3b08b8f561a9febbb6314"
+    "mtime": 1792844612.3193464,
+    "seen": 1792844736.8032498,
+    "ast_hash": "ec0888bfa872983d2e6527a46f7c8f9b",
+    "semantic_hash": ""
   },
   "docs/memos/cisco-ios.md": {
-    "mtime": 1790271993.3567111,
-    "seen": 1790501665.8409464,
+    "mtime": 1792843035.0572784,
+    "seen": 1792844736.8032527,
     "ast_hash": "51031ea5c61c42b9223a43be3c25d8aa",
     "semantic_hash": "51031ea5c61c42b9223a43be3c25d8aa"
   },
   "docs/memos/netplan.md": {
-    "mtime": 1790446454.8693583,
-    "seen": 1790501665.8409474,
+    "mtime": 1792843035.0604684,
+    "seen": 1792844736.8032558,
     "ast_hash": "86d6321b0497ca26604c2d9f6c42f3c7",
     "semantic_hash": "86d6321b0497ca26604c2d9f6c42f3c7"
   },
   "docs/reseau/index.md": {
-    "mtime": 1790445245.1207085,
-    "seen": 1790501665.8409488,
-    "ast_hash": "5e890c6ee55bf6c2b31024986e70ab3e",
-    "semantic_hash": "5e890c6ee55bf6c2b31024986e70ab3e"
+    "mtime": 1792844637.7869284,
+    "seen": 1792844736.8032582,
+    "ast_hash": "ecc719da9ce14e27eacebce016177525",
+    "semantic_hash": ""
   },
   "docs/reseau/nat-pat.md": {
-    "mtime": 1790272007.30556,
-    "seen": 1790501665.8409498,
+    "mtime": 1792843035.0671973,
+    "seen": 1792844736.8032606,
     "ast_hash": "318bc10942c40297ea5b00be0bbba36d",
     "semantic_hash": "318bc10942c40297ea5b00be0bbba36d"
   },
   "docs/reseau/rip-v2.md": {
-    "mtime": 1790272016.704362,
-    "seen": 1790501665.840951,
+    "mtime": 1792843035.0704944,
+    "seen": 1792844736.8032634,
     "ast_hash": "92e61621fec84891ede04aaedfc2f22d",
     "semantic_hash": "92e61621fec84891ede04aaedfc2f22d"
   },
   "docs/reseau/routage-statique.md": {
-    "mtime": 1790272022.0624337,
-    "seen": 1790501665.8409524,
+    "mtime": 1792843035.0728,
+    "seen": 1792844736.803266,
     "ast_hash": "03e6c7455d63a53fb02a256998f5bdd4",
     "semantic_hash": "03e6c7455d63a53fb02a256998f5bdd4"
   },
   "docs/securite/cisco-acl.md": {
-    "mtime": 1790447377.137924,
-    "seen": 1790501665.8409548,
+    "mtime": 1792843035.0748491,
+    "seen": 1792844736.8032675,
     "ast_hash": "04216ab54d5aefc6b83ae221e5a6463a",
     "semantic_hash": "04216ab54d5aefc6b83ae221e5a6463a"
   },
   "mkdocs.yml": {
-    "mtime": 1790500526.1579056,
-    "seen": 1790501665.840956,
-    "ast_hash": "5045cd7cf512ace59b13da94cd7d84f2",
-    "semantic_hash": "5045cd7cf512ace59b13da94cd7d84f2"
+    "mtime": 1792844601.3066604,
+    "seen": 1792844736.8032753,
+    "ast_hash": "1d70b49c3fd8e94aa40636cb7086cfc3",
+    "semantic_hash": ""
   },
   "requirements.txt": {
-    "mtime": 1790500544.7622435,
-    "seen": 1790501665.840957,
+    "mtime": 1792843035.137286,
+    "seen": 1792844736.8032799,
     "ast_hash": "486e34d63733613605f7256f80756cba",
     "semantic_hash": "486e34d63733613605f7256f80756cba"
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1792843035.0185914,
+    "seen": 1792844736.8032215,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1792843035.0419729,
+    "seen": 1792844736.8032284,
+    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "semantic_hash": ""
+  },
+  "Changement.txt": {
+    "mtime": 1792844677.6090348,
+    "seen": 1792844736.8032305,
+    "ast_hash": "d8d6e5538f49251fe3b5a5963e7b67ca",
+    "semantic_hash": ""
+  },
+  "docs/404.md": {
+    "mtime": 1792843035.0419729,
+    "seen": 1792844736.8032343,
+    "ast_hash": "35e357e944d4704b0c372fe66561a581",
+    "semantic_hash": ""
+  },
+  "docs/conteneurisation/docker.en.md": {
+    "mtime": 1792843035.046729,
+    "seen": 1792844736.8032355,
+    "ast_hash": "e57385bedbea7b9394d4205cd07e55cd",
+    "semantic_hash": ""
+  },
+  "docs/conventions.en.md": {
+    "mtime": 1792844632.9861662,
+    "seen": 1792844736.803239,
+    "ast_hash": "d99bc9a499089d803544a6ffd818520e",
+    "semantic_hash": ""
+  },
+  "docs/depannage/index.en.md": {
+    "mtime": 1792843035.050248,
+    "seen": 1792844736.8032424,
+    "ast_hash": "a1595b7509cfdd512b4b8be633055e2d",
+    "semantic_hash": ""
+  },
+  "docs/gabarit.en.md": {
+    "mtime": 1792844668.6313727,
+    "seen": 1792844736.8032458,
+    "ast_hash": "0a2b2bbc5a9624e81807f28dce9ad8c5",
+    "semantic_hash": ""
+  },
+  "docs/index.en.md": {
+    "mtime": 1792844625.064661,
+    "seen": 1792844736.8032486,
+    "ast_hash": "ce4caf0a84ccc822e481dc760a1558e1",
+    "semantic_hash": ""
+  },
+  "docs/memos/cisco-ios.en.md": {
+    "mtime": 1792843035.0543709,
+    "seen": 1792844736.8032513,
+    "ast_hash": "ded0611aac0fa743a08c4318c9b098a7",
+    "semantic_hash": ""
+  },
+  "docs/memos/netplan.en.md": {
+    "mtime": 1792843035.0587862,
+    "seen": 1792844736.8032541,
+    "ast_hash": "90214ebd81142abfef3e67c4e8c2b7bb",
+    "semantic_hash": ""
+  },
+  "docs/reseau/index.en.md": {
+    "mtime": 1792844640.5907376,
+    "seen": 1792844736.8032568,
+    "ast_hash": "057ada0be7cc3a4b15e8d3ae896766c7",
+    "semantic_hash": ""
+  },
+  "docs/reseau/nat-pat.en.md": {
+    "mtime": 1792843035.0661745,
+    "seen": 1792844736.8032591,
+    "ast_hash": "2e52fdf7c58f37b92c939d065b0ee4e7",
+    "semantic_hash": ""
+  },
+  "docs/reseau/rip-v2.en.md": {
+    "mtime": 1792843035.068983,
+    "seen": 1792844736.8032618,
+    "ast_hash": "e23ef4f492f60c98bdb53beb58fdd03f",
+    "semantic_hash": ""
+  },
+  "docs/reseau/routage-statique.en.md": {
+    "mtime": 1792843035.0716667,
+    "seen": 1792844736.8032649,
+    "ast_hash": "1106f896dce660e63b81ab3be8466882",
+    "semantic_hash": ""
+  },
+  "docs/securite/index.en.md": {
+    "mtime": 1792843035.0748491,
+    "seen": 1792844736.803269,
+    "ast_hash": "b78a2e81a7e4c9f5266fae74c1b0a684",
+    "semantic_hash": ""
+  },
+  "docs/securite/index.md": {
+    "mtime": 1792843035.0764258,
+    "seen": 1792844736.80327,
+    "ast_hash": "3941e4e040d02214cece686abf57a496",
+    "semantic_hash": ""
+  },
+  "superpowers/specs/2026-10-24-refonte-wiki-design.md": {
+    "mtime": 1792844590.7844594,
+    "seen": 1792844736.8032813,
+    "ast_hash": "40c6df399ec460aa2c1d8d0e40bb4149",
+    "semantic_hash": ""
+  },
+  "docs/assets/favicon.svg": {
+    "mtime": 1792842585.5959828,
+    "seen": 1792844736.8032827,
+    "ast_hash": "ad6850be6a87b7d998598acf41a7d19a",
+    "semantic_hash": ""
   }
 }

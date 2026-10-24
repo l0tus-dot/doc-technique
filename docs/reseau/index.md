@@ -9,7 +9,7 @@ Configuration des équipements d'interconnexion : routage, traduction d'adresses
 - [NAT et PAT](nat-pat.md) — sortie du LAN derrière une adresse publique, publication d'un serveur
 - [Dépannage réseau](../depannage/index.md) — méthode par couche et diagnostic des pannes fréquentes
 
-Pour la conteneurisation et Docker, voir la section [Systèmes](../systemes/index.md).
+Pour la conteneurisation et Docker, voir la section [Conteneurisation](../conteneurisation/docker.md).
 
 Pour les listes de contrôle d'accès et le filtrage de sécurité, voir [Listes de contrôle d'accès (ACL Cisco)](../securite/cisco-acl.md) dans la section Cybersécurité.
 

@@ -12,29 +12,17 @@ The procedures I apply in labs, on internships, and in my homelab: network confi
 
     [Open the section](reseau/index.md)
 
--   __Systems__
+-   __Containerization__
 
-    Windows Server, Ubuntu Server administration, and Docker / DevOps containerization.
+    Docker: installation, containers, images, networks, volumes, Dockerfile and Compose.
 
-    [Open the section](systemes/index.md)
+    [Open the section](conteneurisation/docker.md)
 
 -   __Cybersecurity__
 
     Cisco ACL filtering, pfSense, WireGuard, hardening, and privilege delegation with sudo.
 
     [Open the section](securite/index.md)
-
--   __Cross-cutting projects__
-
-    Complete architectures combining several building blocks — the overall vision, not a single technology.
-
-    [Open the section](projets-transverses/index.md)
-
--   __Services__
-
-    NetBox, Pi-hole, Nginx Proxy Manager, monitoring.
-
-    [Open the section](services/index.md)
 
 -   __Cheat sheets__
 
@@ -48,9 +36,9 @@ The procedures I apply in labs, on internships, and in my homelab: network confi
 
 Technology pages all follow the same structure: context, prerequisites, topology, procedure, rollback plan, verification, troubleshooting. The **Verification** section gives the command that proves the configuration works — run it before considering a change complete.
 
-[Cross-cutting projects](projets-transverses/index.md) pages follow a different structure, built for a multi-brick architecture rather than a single procedure — see their index page.
+A page combining several building blocks (a complete architecture rather than a single procedure) follows a different structure — see the project template in the [template](gabarit.md).
 
-The [writing conventions](conventions.md) detail the notations used. The [template](gabarit.md) is the starting point for any new technology page.
+The [writing conventions](conventions.md) detail the notations used. The [template](gabarit.md) is the starting point for any new page.
 
 !!! note "Some pages are still French-only"
     This site is being translated progressively. Any page without an English version yet falls back to its French original — the content is still there, just not translated.

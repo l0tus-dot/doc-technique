@@ -9,7 +9,7 @@ Configuring interconnection devices: routing, address translation, segmentation,
 - [NAT and PAT](nat-pat.md) — getting the LAN out behind a public address, publishing a server
 - [Network troubleshooting](../depannage/index.md) — methodology by layer and common failure diagnostics
 
-For containerization and Docker, see the [Systems](../systemes/index.md) section.
+For containerization and Docker, see the [Containerization](../conteneurisation/docker.md) section.
 
 For access control lists and security filtering, see [Access Control Lists (Cisco ACL)](../securite/cisco-acl.md) in the Cybersecurity section.
 

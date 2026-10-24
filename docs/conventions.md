@@ -50,7 +50,7 @@ En environnement de production, toute modification s'accompagne d'un plan d'annu
 
 ## Fiches de projet transverse
 
-Une fiche qui combine plusieurs briques distinctes ne suit pas le gabarit ci-dessus : elle documente l'architecture et ses points d'intégration, pas une procédure unique. Structure et gabarit dans [Projets transverses](projets-transverses/index.md).
+Une fiche qui combine plusieurs briques distinctes ne suit pas le gabarit ci-dessus : elle documente l'architecture et ses points d'intégration, pas une procédure unique. Structure et gabarit de projet dans le [gabarit](gabarit.md#gabarit-de-projet).
 
 ## Nommage des fichiers
 
