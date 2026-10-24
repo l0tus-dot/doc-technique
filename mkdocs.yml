@@ -106,6 +106,7 @@ plugins:
             Cybersécurité: Cybersecurity
             Listes de contrôle d'accès (ACL Cisco): Access Control Lists (Cisco ACL)
             Délégation de droits avec sudo: Privilege delegation with sudo
+            VPN (WireGuard): VPN (WireGuard)
             Active Directory: Active Directory
             Mémos: Cheat sheets
             Mémo Cisco IOS: Cisco IOS cheat sheet
@@ -137,6 +138,7 @@ nav:
       - securite/index.md
       - securite/cisco-acl.md
       - securite/sudo-delegation.md
+      - securite/vpn-wireguard.md
   - Mémos:
       - memos/cisco-ios.md
       - memos/netplan.md
