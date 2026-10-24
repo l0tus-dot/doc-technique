@@ -20,10 +20,10 @@ Faire communiquer deux réseaux locaux séparés par une liaison entre routeurs,
 
 ```mermaid
 flowchart LR
-    PC1["PC1"]
-    R1(("R1"))
-    R2(("R2"))
-    SRV1["SRV1"]
+    PC1@{ icon: "mdi:desktop-classic", form: "square", label: "PC1" }
+    R1@{ icon: "mdi:router-network", form: "square", label: "R1" }
+    R2@{ icon: "mdi:router-network", form: "square", label: "R2" }
+    SRV1@{ icon: "mdi:server", form: "square", label: "SRV1" }
 
     PC1 ---|"Gi0/1 · 192.168.10.1/24"| R1
     R1 ===|"Gi0/0 ↔ Gi0/0 · 10.0.0.0/30"| R2

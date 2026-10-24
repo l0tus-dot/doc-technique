@@ -37,11 +37,11 @@ Ce que la procédure permet de faire, et dans quelle situation on l'applique.
 
 ```mermaid
 flowchart LR
-    PC1["PC1\n192.168.10.10"]
-    SW1(("SW1"))
-    R1(("R1"))
-    R2(("R2"))
-    SRV1["SRV1"]
+    PC1@{ icon: "mdi:desktop-classic", form: "square", label: "PC1\n192.168.10.10" }
+    SW1@{ icon: "mdi:lan", form: "square", label: "SW1" }
+    R1@{ icon: "mdi:router-network", form: "square", label: "R1" }
+    R2@{ icon: "mdi:router-network", form: "square", label: "R2" }
+    SRV1@{ icon: "mdi:server", form: "square", label: "SRV1" }
 
     PC1 --- SW1
     SW1 ---|"Gi0/1 · 192.168.10.1/24"| R1
@@ -147,9 +147,9 @@ Le besoin auquel répond cette architecture, en une situation concrète — pas 
 
 ```mermaid
 flowchart LR
-    Client["Poste client"]
-    FW((Pare-feu))
-    SRV["Serveur"]
+    Client@{ icon: "mdi:desktop-classic", form: "square", label: "Poste client" }
+    FW@{ icon: "mdi:security-network", form: "square", label: "Pare-feu" }
+    SRV@{ icon: "mdi:server", form: "square", label: "Serveur" }
 
     Client --- FW
     FW --- SRV

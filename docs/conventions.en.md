@@ -34,10 +34,14 @@ The examples always use the same plan, so pages combine cleanly with one another
 
 ## Topology diagrams
 
-Topologies are drawn in Mermaid (blocks linked by connections), rendered directly by the site — no image to attach or regenerate whenever something changes.
+Topologies are drawn in Mermaid (blocks linked by connections), rendered directly by the site — no image to attach or regenerate whenever something changes. Each device carries a real icon, registered locally (`docs/assets/icons-mdi.json`, `docs/javascripts/mermaid-icons.js`) — no network dependency when viewing a page.
 
-- Circle (`((...))`) — interconnection device: router, switch.
-- Rectangle (`[...]`) — host: workstation, server.
+- `mdi:desktop-classic` — client workstation.
+- `mdi:lan` — switch.
+- `mdi:router-network` — router.
+- `mdi:security-network` — firewall.
+- `mdi:server` — server.
+- `mdi:cloud` — WAN, ISP, Internet.
 - Single line (`---`) — regular wired link.
 - Double line (`===`) — point-to-point or WAN link.
 - The label on the link carries the interface and address: `"Gi0/1 · 192.168.10.1/24"`.

@@ -34,10 +34,14 @@ Les exemples utilisent toujours le même plan, pour que les fiches se combinent 
 
 ## Schémas de topologie
 
-Les topologies sont dessinées en Mermaid (blocs reliés par des liaisons), rendu directement par le site — pas d'image à joindre ni à régénérer en cas de correction.
+Les topologies sont dessinées en Mermaid (blocs reliés par des liaisons), rendu directement par le site — pas d'image à joindre ni à régénérer en cas de correction. Chaque équipement porte une icône réelle, enregistrée localement (`docs/assets/icons-mdi.json`, `docs/javascripts/mermaid-icons.js`) — aucune dépendance réseau au moment de la consultation.
 
-- Cercle (`((...))`) — équipement d'interconnexion : routeur, commutateur.
-- Rectangle (`[...]`) — hôte : poste, serveur.
+- `mdi:desktop-classic` — poste client.
+- `mdi:lan` — commutateur.
+- `mdi:router-network` — routeur.
+- `mdi:security-network` — pare-feu.
+- `mdi:server` — serveur.
+- `mdi:cloud` — WAN, FAI, Internet.
 - Liaison simple (`---`) — lien filaire classique.
 - Liaison double trait (`===`) — liaison point à point ou WAN.
 - Le libellé sur la liaison porte l'interface et l'adresse : `"Gi0/1 · 192.168.10.1/24"`.

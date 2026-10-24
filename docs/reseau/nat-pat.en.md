@@ -20,9 +20,9 @@ Letting a private network reach the outside behind a single public address (PAT)
 
 ```mermaid
 flowchart LR
-    PC1["PC1<br>192.168.10.10"]
-    R1(("R1"))
-    ISP[/"ISP"/]
+    PC1@{ icon: "mdi:desktop-classic", form: "square", label: "PC1\n192.168.10.10" }
+    R1@{ icon: "mdi:router-network", form: "square", label: "R1" }
+    ISP@{ icon: "mdi:cloud", form: "square", label: "ISP" }
 
     PC1 ---|"Gi0/1 inside · 192.168.10.1/24"| R1
     R1 ---|"Gi0/0 outside · 203.0.113.2/24"| ISP

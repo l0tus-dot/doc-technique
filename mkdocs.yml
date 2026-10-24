@@ -47,6 +47,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/mermaid-icons.js
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -96,6 +99,7 @@ plugins:
             Routage statique: Static routing
             Routage dynamique — RIP version 2: Dynamic routing — RIP v2
             NAT et PAT: NAT and PAT
+            DHCP: DHCP
             Conteneurisation: Containerization
             Docker: Docker
             Dépannage réseau: Network troubleshooting
@@ -123,6 +127,7 @@ nav:
       - reseau/routage-statique.md
       - reseau/rip-v2.md
       - reseau/nat-pat.md
+      - reseau/dhcp.md
       - depannage/index.md
   - Conteneurisation:
       - conteneurisation/docker.md

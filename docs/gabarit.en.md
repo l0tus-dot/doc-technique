@@ -19,11 +19,11 @@ What the procedure achieves, and in which situation it applies.
 
 ```mermaid
 flowchart LR
-    PC1["PC1"]
-    SW1(("SW1"))
-    R1(("R1"))
-    R2(("R2"))
-    SRV1["SRV1"]
+    PC1@{ icon: "mdi:desktop-classic", form: "square", label: "PC1" }
+    SW1@{ icon: "mdi:lan", form: "square", label: "SW1" }
+    R1@{ icon: "mdi:router-network", form: "square", label: "R1" }
+    R2@{ icon: "mdi:router-network", form: "square", label: "R2" }
+    SRV1@{ icon: "mdi:server", form: "square", label: "SRV1" }
 
     PC1 --- SW1
     SW1 --- R1
@@ -85,9 +85,9 @@ The need this architecture addresses, as a concrete situation — not a list of 
 
 ```mermaid
 flowchart LR
-    Client["Client workstation"]
-    FW((Firewall))
-    SRV["Server"]
+    Client@{ icon: "mdi:desktop-classic", form: "square", label: "Client workstation" }
+    FW@{ icon: "mdi:security-network", form: "square", label: "Firewall" }
+    SRV@{ icon: "mdi:server", form: "square", label: "Server" }
 
     Client --- FW
     FW --- SRV
