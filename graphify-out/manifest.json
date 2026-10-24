@@ -18,10 +18,10 @@
     "semantic_hash": ""
   },
   "overrides/main.html": {
-    "mtime": 1792843035.1338415,
-    "seen": 1792844736.8032765,
-    "ast_hash": "c8ed973a67a978c2344bd3c56801e3ad",
-    "semantic_hash": "c8ed973a67a978c2344bd3c56801e3ad"
+    "mtime": 1792847228.9772906,
+    "seen": 1792847292.8498433,
+    "ast_hash": "47643d33952b89a13eca823923e5be0f",
+    "semantic_hash": ""
   },
   "overrides/partials/source-file.html": {
     "mtime": 1792843035.1358552,
@@ -114,9 +114,9 @@
     "semantic_hash": ""
   },
   "mkdocs.yml": {
-    "mtime": 1792846468.8335898,
-    "seen": 1792846533.1138966,
-    "ast_hash": "1bfc0725a4a573caa8de704dae8f1851",
+    "mtime": 1792847139.862478,
+    "seen": 1792847292.849841,
+    "ast_hash": "08b70487d2ce96df24e53161ad3f72d7",
     "semantic_hash": ""
   },
   "requirements.txt": {
@@ -228,9 +228,9 @@
     "semantic_hash": ""
   },
   "superpowers/specs/2026-10-24-refonte-wiki-design.md": {
-    "mtime": 1792846526.512148,
-    "seen": 1792846533.1139028,
-    "ast_hash": "14a8d5e8c17a1add1be7616765a83cda",
+    "mtime": 1792847279.729125,
+    "seen": 1792847292.8498485,
+    "ast_hash": "f190c341cd855ff202ad5d546cf0ae09",
     "semantic_hash": ""
   },
   "docs/assets/favicon.svg": {

@@ -101,3 +101,22 @@ Vérifié visuellement (page Tags + fiche Docker) via `mkdocs serve` avant valid
 ### Hors scope de ce sous-projet
 
 Recherche / filtres — sous-projet suivant.
+
+## Sous-projet 5 — Recherche / filtres
+
+### Investigation (spike)
+
+Testé en conditions réelles avant de concevoir quoi que ce soit : `shutdown` seul renvoie 5 bons résultats surlignés ; `no shutdown` (la commande réelle utilisée dans les fiches) renvoie 22 résultats sans rapport et affiche « Non trouvé : shutdown ». Cause : la recherche intégrée de Material élargit chaque mot d'une requête à plusieurs termes en préfixe (`no*`), qui matche alors des dizaines de mots sans rapport et noie le mot distinctif.
+
+Pistes testées sans effet : `search.lang: [fr, en]` au lieu de `fr` seul, désactivation de `search.suggest`, requête entre guillemets (phrase exacte — cette version du moteur ne la traite pas différemment).
+
+### Décisions validées
+
+- **Pas de correctif du moteur de requête** : demanderait de réécrire la logique de requête de Material en JS sur-mesure, fragile à chaque mise à jour du thème, pour un site à faible fréquence de maintenance.
+- **Placeholder de la barre de recherche changé** pour indiquer la bonne pratique (« Chercher un mot précis (ex: shutdown) » / « Search one precise word (e.g. shutdown) »), FR et EN, via un petit script dans `overrides/main.html` (point de personnalisation déjà utilisé pour le bouton PDF — aucune nouvelle dépendance).
+- **Combiner mot-clé + tag + section** : pas retenu comme manque réel une fois les tags en place (sous-projet 4) — chaque résultat de recherche affiche déjà ses puces de tag, et `/tags/` permet de parcourir par tag. Un filtre à facettes serait disproportionné pour 9 fiches de contenu.
+- Vérifié visuellement (placeholder FR et EN) via `mkdocs serve` avant validation.
+
+### Suite de la refonte
+
+Les 5 sous-projets sont faits. Rien d'autre n'est planifié pour l'instant — du contenu supplémentaire (Systèmes, Services, Docker Compose, voir `Changement.txt`) rouvrira naturellement certaines de ces sections dans le menu (sous-projet 1).

@@ -14,3 +14,22 @@
   {% endif %}
   {{ super() }}
 {% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    {# La recherche intégrée élargit chaque mot d'une requête à plusieurs
+       termes (ex: « no shutdown » devient « no* shutdown* »), ce qui noie
+       un mot distinctif derrière un mot courant. Pas de correctif fiable
+       sans réécrire la logique de requête du moteur ; on indique plutôt
+       la bonne pratique dans le placeholder. #}
+    document.addEventListener("DOMContentLoaded", function () {
+      var hint = document.documentElement.lang === "en"
+        ? "Search one precise word (e.g. shutdown)"
+        : "Chercher un mot précis (ex: shutdown)";
+      document.querySelectorAll(".md-search__input").forEach(function (el) {
+        el.setAttribute("placeholder", hint);
+      });
+    });
+  </script>
+{% endblock %}
