@@ -43,3 +43,19 @@ Accueil · Réseau · Conteneurisation · Cybersécurité · Mémos
 ### Hors scope de ce sous-projet
 
 Mise en page, page d'accueil enrichie, tags, recherche — traités dans les sous-projets suivants.
+
+## Sous-projet 2 — Mise en page / espacement
+
+### Décisions validées
+
+Approche retenue : réglages ciblés plutôt qu'un indicateur de progression sur-mesure (trop pour le gain) ou un retour aux réglages par défaut de Material (dilue l'identité visuelle déjà posée, pas le problème signalé).
+
+- **Fil d'Ariane retiré** (`navigation.path`) : redondant avec les onglets + le menu latéral qui montrent déjà la hiérarchie.
+- **`toc_depth` remonté à 3** et suppression de la règle CSS qui masquait les sous-niveaux du sommaire de droite (`.md-nav--secondary .md-nav { display: none; }`) : les étapes numérotées (`### 1.`, `### 2.`...) d'une procédure apparaissent maintenant dans le sommaire, qui se surligne au scroll — c'est le repère « où j'en suis », sans rien construire de nouveau.
+- **Marges aérées** : `h2` (2.5em → 3em au-dessus, 0.75em → 1em en dessous), paragraphes (`--sp-4` → `--sp-6`), blocs de code (marge verticale ajoutée), grille de cartes de l'accueil (`gap` + `padding` augmentés).
+
+Vérifié visuellement via `mkdocs serve` + aperçu navigateur (accueil et une fiche longue avec blocs de code) avant validation finale, plutôt qu'avec des maquettes génériques.
+
+### Hors scope de ce sous-projet
+
+Contenu de la page d'accueil, tags, recherche — sous-projets suivants.

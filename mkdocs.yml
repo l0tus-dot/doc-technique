@@ -32,7 +32,6 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.indexes
-    - navigation.path          # fil d'Ariane (breadcrumb)
     - toc.follow
     - search.suggest
     - search.highlight
@@ -52,7 +51,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: "#"
-      toc_depth: 2
+      toc_depth: 3
       title: Sur cette page
   - pymdownx.details
   - pymdownx.highlight:

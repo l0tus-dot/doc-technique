@@ -131,8 +131,8 @@
   font-size:      1.25rem;
   letter-spacing: -0.01em;
   line-height:    1.35;
-  margin-top:     2.5em;
-  margin-bottom:  0.75em;
+  margin-top:     3em;
+  margin-bottom:  1em;
   padding-bottom: 0.4em;
   border-bottom:  2px solid var(--bn-line);
   color:          var(--md-default-fg-color);
@@ -181,7 +181,7 @@
 
 /* Paragraphes */
 .md-typeset p {
-  margin-bottom: var(--sp-4);
+  margin-bottom: var(--sp-6);
 }
 
 /* Liens */
@@ -231,6 +231,7 @@
 .md-typeset pre {
   border-radius: var(--r-md);
   overflow: hidden;
+  margin: var(--sp-6) 0;
 }
 
 .md-typeset pre > code {
@@ -479,10 +480,9 @@
    TABLE DES MATIÈRES LATÉRALE DROITE
    ============================================================ */
 
-/* Limiter aux grandes sections (h2) seulement */
-.md-nav--secondary .md-nav {
-  display: none;
-}
+/* Les sous-sections (h3, ex: étapes numérotées d'une procédure) restent
+   visibles jusqu'à toc_depth — c'est le repère « où j'en suis » dans
+   une fiche longue, sans rien ajouter de plus à l'interface. */
 
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link {
   font-size:   0.75rem;
@@ -499,12 +499,17 @@
    CARDS — PAGE D'ACCUEIL
    ============================================================ */
 
+.md-typeset .grid.cards {
+  gap: var(--sp-6);
+  margin-top: var(--sp-8);
+}
+
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > :is(ul, ol) > li,
 [data-md-color-scheme="slate"] .md-typeset .grid > .card {
   background-color: var(--bn-surface);
   border:           1px solid var(--bn-line);
   border-radius:    var(--r-lg);
-  padding:          var(--sp-6);
+  padding:          var(--sp-8);
   transition:       border-color var(--t-normal),
                     transform    var(--t-normal),
                     box-shadow   var(--t-normal);
