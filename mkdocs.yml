@@ -104,6 +104,7 @@ plugins:
             Docker: Docker
             Dépannage réseau: Network troubleshooting
             Cybersécurité: Cybersecurity
+            Segmentation VLSM: VLSM Subnetting
             Listes de contrôle d'accès (ACL Cisco): Access Control Lists (Cisco ACL)
             Délégation de droits avec sudo: Privilege delegation with sudo
             VPN (WireGuard): VPN (WireGuard)
@@ -136,6 +137,7 @@ nav:
       - conteneurisation/docker.md
   - Cybersécurité:
       - securite/index.md
+      - securite/vlsm.md
       - securite/cisco-acl.md
       - securite/sudo-delegation.md
       - securite/vpn-wireguard.md

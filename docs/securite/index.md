@@ -4,6 +4,7 @@ Filtrage, chiffrement des accès distants, durcissement et gestion des privilèg
 
 ## Fiches disponibles
 
+- [Segmentation VLSM](vlsm.md) — découpage d'un bloc d'adresses en sous-réseaux de tailles adaptées, allocation par besoins décroissants
 - [Listes de contrôle d'accès (ACL Cisco)](cisco-acl.md) — ACL standard, étendue, nommée, masques génériques, sécurisation VTY
 - [Délégation de droits avec sudo](sudo-delegation.md) — sudoers, visudo, délégation ciblée, NOEXEC, alias
 - [VPN (WireGuard)](vpn-wireguard.md) — tunnel site à site, accès distant pour un poste nomade, révocation de clé
