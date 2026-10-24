@@ -5,6 +5,7 @@ Filtering, encrypted remote access, hardening, and privilege management.
 ## Available pages
 
 - [Privilege delegation with sudo](sudo-delegation.md) — sudoers, visudo, targeted delegation, NOEXEC, aliases
+- [Active Directory](active-directory.md) — organizational units, the AGDLP method, GPOs, replication between domain controllers
 
 ## To be written
 

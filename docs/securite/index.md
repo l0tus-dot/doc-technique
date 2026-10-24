@@ -6,6 +6,7 @@ Filtrage, chiffrement des accès distants, durcissement et gestion des privilèg
 
 - [Listes de contrôle d'accès (ACL Cisco)](cisco-acl.md) — ACL standard, étendue, nommée, masques génériques, sécurisation VTY
 - [Délégation de droits avec sudo](sudo-delegation.md) — sudoers, visudo, délégation ciblée, NOEXEC, alias
+- [Active Directory](active-directory.md) — unités d'organisation, méthode AGDLP, GPO, réplication entre contrôleurs de domaine
 
 ## À rédiger
 
