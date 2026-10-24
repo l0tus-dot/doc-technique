@@ -1,17 +1,17 @@
 # Graph Report - doc-technique  (2026-10-24)
 
 ## Corpus Check
-- 33 files · ~22,970 words
+- 34 files · ~23,654 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 3, .css 1)
 
 ## Summary
-- 351 nodes · 370 edges · 30 communities (23 shown, 7 thin omitted)
+- 367 nodes · 393 edges · 30 communities (23 shown, 7 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1b45590e`
+- Built from commit: `338163a3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,6 +25,7 @@
 - Dépannage réseau
 - 3. Procédure d'application
 - NAT and PAT
+- recent_pages.py
 - Template Override System
 - Partial Source Overrides
 - Dynamic routing — RIP version 2
@@ -34,7 +35,6 @@
 - Docker
 - Netplan cheat sheet
 - Network troubleshooting
-- Procédure
 - Procedure
 - Conventions
 - Conventions
@@ -81,8 +81,8 @@
 ## Communities (30 total, 7 thin omitted)
 
 ### Community 0 - "Privilege delegation with sudo"
-Cohesion: 0.09
-Nodes (20): Sudoers Aliases, NOEXEC Security Option, visudo Utility, Available pages, Cybersecurity, To be written, Comptes utilisés dans cette procédure, Contexte (+12 more)
+Cohesion: 0.06
+Nodes (30): Sudoers Aliases, NOEXEC Security Option, visudo Utility, Available pages, Cybersecurity, To be written, 1. Vérifier l'installation et le fichier sudoers, 2. Observer le comportement par défaut, sans délégation (+22 more)
 
 ### Community 1 - "NAT et PAT"
 Cohesion: 0.12
@@ -97,7 +97,7 @@ Cohesion: 0.05
 Nodes (39): 10. Enregistrer un conteneur modifié, 11. Maintenance et nettoyage, 1. Installation, 2. Concepts clés, 3. Images, 4. Conteneurs — cycle de vie, 5. Réseau, 6. Volumes et persistance (+31 more)
 
 ### Community 5 - "reseau/index.md"
-Cohesion: 0.13
+Cohesion: 0.12
 Nodes (15): Comment lire une fiche, Documentation technique, How to read a page, Technical documentation, Where to start, Par où commencer, Available pages, Network (+7 more)
 
 ### Community 6 - "Dépannage réseau"
@@ -112,8 +112,12 @@ Nodes (16): 1. Fichiers de configuration, 1. Identifier l'interface et le fichie
 Cohesion: 0.12
 Nodes (15): 1. Mark the interfaces, 2. Define the traffic to translate, 3. Enable PAT, 4. Variant: dynamic NAT with a pool, 5. Expose an internal server, 6. Save, Context, Linux equivalent (+7 more)
 
+### Community 9 - "recent_pages.py"
+Cohesion: 0.38
+Nodes (5): _git_timestamp(), on_page_markdown(), _recent_pages(), _render(), _title()
+
 ### Community 15 - "Dynamic routing — RIP version 2"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (15): 1. Enable RIP and set the version, 2. Declare the directly connected networks, 3. Configure R2 symmetrically, 4. Disable announcements on LAN-facing interfaces, 5. Inject a default route (on the edge router), 6. Authenticate exchanges (recommended beyond a lab setup), 7. Save, Context (+7 more)
 
 ### Community 16 - "Listes de contrôle d'accès (ACL Cisco)"
@@ -125,7 +129,7 @@ Cohesion: 0.13
 Nodes (15): 1. Activer RIP et déclarer la version, 2. Déclarer les réseaux directement connectés, 3. Configurer R2 symétriquement, 4. Désactiver l'émission sur les interfaces côté LAN, 5. Injecter une route par défaut (sur le routeur de bordure), 6. Authentifier les échanges (recommandé au-delà d'une maquette), 7. Enregistrer, Contexte (+7 more)
 
 ### Community 18 - "Static routing"
-Cohesion: 0.14
+Cohesion: 0.15
 Nodes (13): 1. Address R1's interfaces, 2. Declare the route to the remote network, 3. Configure R2 symmetrically, 4. Add a default route to the outside, 5. Save, Context, Prerequisites, Procedure (+5 more)
 
 ### Community 19 - "Docker"
@@ -140,10 +144,6 @@ Nodes (12): 1. Identify the file and the interface, 2. Back up, then edit the fi
 Cohesion: 0.20
 Nodes (10): Firewall and access control lists, General diagnostic commands, IP addressing and DHCP, Method, Name resolution (DNS), Network troubleshooting, Performance and MTU, Physical connectivity and data link (+2 more)
 
-### Community 22 - "Procédure"
-Cohesion: 0.20
-Nodes (10): 1. Vérifier l'installation et le fichier sudoers, 2. Observer le comportement par défaut, sans délégation, 3. Accorder tous les droits via le groupe `sudo`, 4. Éditer sudoers avec `visudo`, 5. Déléguer un droit précis à un utilisateur, 6. Le risque : contourner une délégation trop large, 7. Corriger : l'option NOEXEC, 8. Restreindre une commande avec des exclusions (+2 more)
-
 ### Community 23 - "Procedure"
 Cohesion: 0.20
 Nodes (10): 1. Check the installation and the sudoers file, 2. Watch the default behavior, with no delegation, 3. Grant full rights via the `sudo` group, 4. Edit sudoers with `visudo`, 5. Delegate a precise right to a user, 6. The risk: bypassing an overly broad delegation, 7. Fixing it: the NOEXEC option, 8. Restricting a command with exclusions (+2 more)
@@ -157,8 +157,8 @@ Cohesion: 0.25
 Nodes (8): Conventions, Encarts, Fiches de projet transverse, Nommage des fichiers, Notations, Plan d'adressage de référence, Plan de retour arrière, Schémas de topologie
 
 ### Community 26 - "Sous-projet 1 — Architecture de l'information"
-Cohesion: 0.25
-Nodes (7): Contexte et objectif, Décisions validées, Fichiers touchés, Hors scope de ce sous-projet, Nav résultant, Refonte du wiki — note de design, Sous-projet 1 — Architecture de l'information
+Cohesion: 0.14
+Nodes (13): Contexte et objectif, Décisions validées, Décisions validées, Décisions validées, Fichiers touchés, Hors scope de ce sous-projet, Hors scope de ce sous-projet, Hors scope de ce sous-projet (+5 more)
 
 ### Community 27 - "Gabarit de fiche"
 Cohesion: 0.29
@@ -174,23 +174,23 @@ Nodes (4): Ajouter une fiche, Aperçu local, Documentation technique, Mise en li
 
 ## Knowledge Gaps
 - **8 isolated node(s):** `Sudoers Aliases`, `visudo Utility`, `ACL Cisco`, `Main Template Override`, `Source File Partial Override` (+3 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 276 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 282 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Docker` connect `Docker` to `reseau/index.md`?**
-  _High betweenness centrality (0.158) - this node is a cross-community bridge._
+  _High betweenness centrality (0.144) - this node is a cross-community bridge._
 - **What connects `Sudoers Aliases`, `visudo Utility`, `ACL Cisco` to the rest of the system?**
   _8 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Privilege delegation with sudo` be split into smaller, more focused modules?**
-  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
-- **Why does `Délégation de droits avec sudo` connect `Privilege delegation with sudo` to `Procédure`?**
-  _High betweenness centrality (0.150) - this node is a cross-community bridge._
+  _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
+- **Why does `Privilege delegation with sudo` connect `Privilege delegation with sudo` to `Procedure`?**
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **Should `NAT et PAT` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
-- **Why does `Privilege delegation with sudo` connect `Privilege delegation with sudo` to `Procedure`?**
-  _High betweenness centrality (0.081) - this node is a cross-community bridge._
 - **Should `Routage statique` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+- **Should `Docker` be split into smaller, more focused modules?**
+  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._

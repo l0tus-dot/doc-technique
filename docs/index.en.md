@@ -40,5 +40,7 @@ A page combining several building blocks (a complete architecture rather than a 
 
 The [writing conventions](conventions.md) detail the notations used. The [template](gabarit.md) is the starting point for any new page.
 
+<!-- recent-pages -->
+
 !!! note "Some pages are still French-only"
     This site is being translated progressively. Any page without an English version yet falls back to its French original — the content is still there, just not translated.

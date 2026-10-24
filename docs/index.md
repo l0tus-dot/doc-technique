@@ -39,3 +39,5 @@ Les fiches par technologie suivent la même structure : contexte, prérequis, to
 Une fiche qui combine plusieurs briques (une architecture complète plutôt qu'une procédure isolée) suit une structure différente — voir le gabarit de projet dans le [gabarit](gabarit.md).
 
 Les [conventions d'écriture](conventions.md) détaillent les notations utilisées. Le [gabarit](gabarit.md) sert de point de départ pour toute nouvelle fiche.
+
+<!-- recent-pages -->

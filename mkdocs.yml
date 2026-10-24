@@ -5,6 +5,9 @@ site_url: https://l0tus-dot.github.io/doc-technique/
 
 copyright: Raphaël Coantin — BTS SIO SISR
 
+hooks:
+  - hooks/recent_pages.py
+
 theme:
   name: material
   custom_dir: overrides

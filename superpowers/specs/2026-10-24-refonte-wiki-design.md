@@ -59,3 +59,17 @@ Vérifié visuellement via `mkdocs serve` + aperçu navigateur (accueil et une f
 ### Hors scope de ce sous-projet
 
 Contenu de la page d'accueil, tags, recherche — sous-projets suivants.
+
+## Sous-projet 3 — Page d'accueil et chemin de lecture
+
+### Décisions validées
+
+- **Priorité : accès rapide**, pas vue d'ensemble — usage principal en aide-mémoire. La structure actuelle de l'accueil (intro + grille de sections + « Comment lire une fiche ») reste quasi inchangée, elle fait déjà ce travail.
+- **Pas de parcours de lecture imposé** — cohérent avec la décision du sous-projet 1 (chaque section indépendante). Le besoin de « fil conducteur pour un nouveau lecteur » se résout plutôt par un repère léger de fraîcheur du contenu, pas par un ordre forcé.
+- **Ajout : bloc « Récemment modifié »**, discret, en bas de l'accueil (3 liens, après « Comment lire une fiche »), en FR et EN.
+- **Génération automatique** via un hook mkdocs natif (`hooks/recent_pages.py`, déclaré dans `mkdocs.yml`, aucune dépendance supplémentaire) qui lit les dates `git log` des fiches de contenu au moment du build. Fonctionne en local et en CI (`fetch-depth: 0` déjà posé dans le workflow). Pages d'accueil, de référence et index de section exclus du classement.
+- Vérifié visuellement via `mkdocs serve` (FR et EN) avant validation.
+
+### Hors scope de ce sous-projet
+
+Tags, recherche — sous-projets suivants.

@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "docs/index.md": {
-    "mtime": 1792844612.3193464,
-    "seen": 1792844736.8032498,
-    "ast_hash": "ec0888bfa872983d2e6527a46f7c8f9b",
+    "mtime": 1792845959.4282844,
+    "seen": 1792846018.634901,
+    "ast_hash": "891be68fa8786992c4e9d92e48a1e716",
     "semantic_hash": ""
   },
   "docs/memos/cisco-ios.md": {
@@ -114,9 +114,9 @@
     "semantic_hash": "04216ab54d5aefc6b83ae221e5a6463a"
   },
   "mkdocs.yml": {
-    "mtime": 1792845135.4119914,
-    "seen": 1792845302.4717722,
-    "ast_hash": "f2eddbb11acea19dd51bb7d90efd06ce",
+    "mtime": 1792845956.501933,
+    "seen": 1792846018.634929,
+    "ast_hash": "57fd2130db59440a4b4c9d56ff388922",
     "semantic_hash": ""
   },
   "requirements.txt": {
@@ -174,9 +174,9 @@
     "semantic_hash": ""
   },
   "docs/index.en.md": {
-    "mtime": 1792844625.064661,
-    "seen": 1792844736.8032486,
-    "ast_hash": "ce4caf0a84ccc822e481dc760a1558e1",
+    "mtime": 1792845961.8871994,
+    "seen": 1792846018.6348996,
+    "ast_hash": "5c2052f5c874239e0f98d47c0ea8331a",
     "semantic_hash": ""
   },
   "docs/memos/cisco-ios.en.md": {
@@ -228,15 +228,21 @@
     "semantic_hash": ""
   },
   "superpowers/specs/2026-10-24-refonte-wiki-design.md": {
-    "mtime": 1792844590.7844594,
-    "seen": 1792844736.8032813,
-    "ast_hash": "40c6df399ec460aa2c1d8d0e40bb4149",
+    "mtime": 1792846012.212144,
+    "seen": 1792846018.634935,
+    "ast_hash": "b41c6f6411b477c7c43c9e8892e532d7",
     "semantic_hash": ""
   },
   "docs/assets/favicon.svg": {
     "mtime": 1792842585.5959828,
     "seen": 1792844736.8032827,
     "ast_hash": "ad6850be6a87b7d998598acf41a7d19a",
+    "semantic_hash": ""
+  },
+  "hooks/recent_pages.py": {
+    "mtime": 1792845953.586983,
+    "seen": 1792846018.6348686,
+    "ast_hash": "a98e50ee2ac3b9f95bef81449ca0c0de",
     "semantic_hash": ""
   }
 }

@@ -1,17 +1,17 @@
 # Graph Report - doc-technique  (2026-10-24)
 
 ## Corpus Check
-- 33 files · ~22,976 words
+- 33 files · ~22,970 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 3, .css 1)
 
 ## Summary
-- 355 nodes · 370 edges · 34 communities (23 shown, 11 thin omitted)
+- 351 nodes · 370 edges · 30 communities (23 shown, 7 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e963b71e`
+- Built from commit: `1b45590e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,10 +25,6 @@
 - Dépannage réseau
 - 3. Procédure d'application
 - NAT and PAT
-- English Services Index
-- French Services Index
-- English Systems Index
-- System Indexing
 - Template Override System
 - Partial Source Overrides
 - Dynamic routing — RIP version 2
@@ -61,7 +57,7 @@
 7. `Listes de contrôle d'accès (ACL Cisco)` - 11 edges
 8. `Network troubleshooting` - 10 edges
 9. `Mémo Cisco IOS` - 10 edges
-10. `Procedure` - 10 edges
+10. `Délégation de droits avec sudo` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Accueil` --conceptually_related_to--> `BTS SIO SISR`  [INFERRED]
@@ -82,7 +78,7 @@
 - **Network Configuration & Troubleshooting** — docs_reseau_routage_statique_routage_statique, docs_reseau_rip_v2_md, docs_reseau_nat_pat_nat_et_pat, docs_depannage_index_dépannage_réseau [EXTRACTED 0.90]
 - **Sudo Security Best Practices** — concept_sudo_noexec, concept_sudo_visudo, concept_sudo_aliases [EXTRACTED 0.90]
 
-## Communities (34 total, 11 thin omitted)
+## Communities (30 total, 7 thin omitted)
 
 ### Community 0 - "Privilege delegation with sudo"
 Cohesion: 0.09
@@ -177,24 +173,24 @@ Cohesion: 0.40
 Nodes (4): Ajouter une fiche, Aperçu local, Documentation technique, Mise en ligne
 
 ## Knowledge Gaps
-- **12 isolated node(s):** `Sudoers Aliases`, `visudo Utility`, `Services Index (FR)`, `Systems Index (EN)`, `Systems Index (FR)` (+7 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 280 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 isolated node(s):** `Sudoers Aliases`, `visudo Utility`, `ACL Cisco`, `Main Template Override`, `Source File Partial Override` (+3 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 276 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Docker` connect `Docker` to `reseau/index.md`?**
-  _High betweenness centrality (0.154) - this node is a cross-community bridge._
-- **What connects `Sudoers Aliases`, `visudo Utility`, `Services Index (FR)` to the rest of the system?**
-  _12 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.158) - this node is a cross-community bridge._
+- **What connects `Sudoers Aliases`, `visudo Utility`, `ACL Cisco` to the rest of the system?**
+  _8 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Privilege delegation with sudo` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
 - **Why does `Délégation de droits avec sudo` connect `Privilege delegation with sudo` to `Procédure`?**
-  _High betweenness centrality (0.147) - this node is a cross-community bridge._
+  _High betweenness centrality (0.150) - this node is a cross-community bridge._
 - **Should `NAT et PAT` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Why does `Privilege delegation with sudo` connect `Privilege delegation with sudo` to `Procedure`?**
-  _High betweenness centrality (0.080) - this node is a cross-community bridge._
+  _High betweenness centrality (0.081) - this node is a cross-community bridge._
 - **Should `Routage statique` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
