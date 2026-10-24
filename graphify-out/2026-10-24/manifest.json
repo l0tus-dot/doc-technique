@@ -48,9 +48,9 @@
     "semantic_hash": ""
   },
   "docs/conventions.md": {
-    "mtime": 1792844629.5440652,
-    "seen": 1792844736.8032408,
-    "ast_hash": "f4dc046f01e0b8fad08bf6443700e16d",
+    "mtime": 1792869177.6413593,
+    "seen": 1792869314.1525435,
+    "ast_hash": "68e8216dec47c84cad4a23f075cf9502",
     "semantic_hash": ""
   },
   "docs/depannage/index.md": {
@@ -60,9 +60,9 @@
     "semantic_hash": ""
   },
   "docs/gabarit.md": {
-    "mtime": 1792844653.4741015,
-    "seen": 1792844736.8032475,
-    "ast_hash": "e699c6380a1572c3e6d54be695deb74e",
+    "mtime": 1792869116.0241797,
+    "seen": 1792869314.1525514,
+    "ast_hash": "4ce195d37b5025edcf0f54f9610901b7",
     "semantic_hash": ""
   },
   "docs/index.md": {
@@ -84,27 +84,27 @@
     "semantic_hash": ""
   },
   "docs/reseau/index.md": {
-    "mtime": 1792844637.7869284,
-    "seen": 1792844736.8032582,
-    "ast_hash": "ecc719da9ce14e27eacebce016177525",
+    "mtime": 1792869246.206486,
+    "seen": 1792869314.1525712,
+    "ast_hash": "a936565952fbc3d7b1758531cc53c625",
     "semantic_hash": ""
   },
   "docs/reseau/nat-pat.md": {
-    "mtime": 1792846413.1150062,
-    "seen": 1792846533.1138775,
-    "ast_hash": "b4008af0be4bee64fd85752fda7ff746",
+    "mtime": 1792869162.704048,
+    "seen": 1792869314.1525753,
+    "ast_hash": "ec3bc3c6c0d713aa5eb9e6ffcbaec014",
     "semantic_hash": ""
   },
   "docs/reseau/rip-v2.md": {
-    "mtime": 1792846410.1845436,
-    "seen": 1792846533.1138806,
-    "ast_hash": "6cadf37189dcec6c2fd62a83bc4420eb",
+    "mtime": 1792869149.5911725,
+    "seen": 1792869314.152579,
+    "ast_hash": "de2cd83a728f686a20cc3feb99cf9c65",
     "semantic_hash": ""
   },
   "docs/reseau/routage-statique.md": {
-    "mtime": 1792846407.2672057,
-    "seen": 1792846533.1138835,
-    "ast_hash": "1cfefdc7c2d5dcc225e8fd52d438ccca",
+    "mtime": 1792869136.0478306,
+    "seen": 1792869314.1525822,
+    "ast_hash": "77b0d459ff60f314a17cdc050a60dfba",
     "semantic_hash": ""
   },
   "docs/securite/cisco-acl.md": {
@@ -114,9 +114,9 @@
     "semantic_hash": ""
   },
   "mkdocs.yml": {
-    "mtime": 1792847139.862478,
-    "seen": 1792847292.849841,
-    "ast_hash": "08b70487d2ce96df24e53161ad3f72d7",
+    "mtime": 1792869252.641068,
+    "seen": 1792869314.1525967,
+    "ast_hash": "0a8ffaf1b91082dd1463750c2093db58",
     "semantic_hash": ""
   },
   "requirements.txt": {
@@ -156,9 +156,9 @@
     "semantic_hash": ""
   },
   "docs/conventions.en.md": {
-    "mtime": 1792844632.9861662,
-    "seen": 1792844736.803239,
-    "ast_hash": "d99bc9a499089d803544a6ffd818520e",
+    "mtime": 1792869182.8266842,
+    "seen": 1792869314.152541,
+    "ast_hash": "70810e7e0c0ffd873fb001ffd25033bf",
     "semantic_hash": ""
   },
   "docs/depannage/index.en.md": {
@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "docs/gabarit.en.md": {
-    "mtime": 1792844668.6313727,
-    "seen": 1792844736.8032458,
-    "ast_hash": "0a2b2bbc5a9624e81807f28dce9ad8c5",
+    "mtime": 1792869130.891022,
+    "seen": 1792869314.1525502,
+    "ast_hash": "94f527708d7958da9b402adcbc4fc12b",
     "semantic_hash": ""
   },
   "docs/index.en.md": {
@@ -192,27 +192,27 @@
     "semantic_hash": ""
   },
   "docs/reseau/index.en.md": {
-    "mtime": 1792844640.5907376,
-    "seen": 1792844736.8032568,
-    "ast_hash": "057ada0be7cc3a4b15e8d3ae896766c7",
+    "mtime": 1792869246.5137782,
+    "seen": 1792869314.1525683,
+    "ast_hash": "bee49681f1a1b0cb2ec822154051aba8",
     "semantic_hash": ""
   },
   "docs/reseau/nat-pat.en.md": {
-    "mtime": 1792846446.6847925,
-    "seen": 1792846533.1138763,
-    "ast_hash": "48b64e3c7e0ec79f6f2bd2220236b012",
+    "mtime": 1792869170.349052,
+    "seen": 1792869314.1525726,
+    "ast_hash": "a52319ea854be1e1247bfddc42452f71",
     "semantic_hash": ""
   },
   "docs/reseau/rip-v2.en.md": {
-    "mtime": 1792846444.4117622,
-    "seen": 1792846533.113879,
-    "ast_hash": "c563b3b9e2b2b2a1b0698de7da481215",
+    "mtime": 1792869157.7795918,
+    "seen": 1792869314.1525772,
+    "ast_hash": "42ed127b31affe6dfc706365392ef0bb",
     "semantic_hash": ""
   },
   "docs/reseau/routage-statique.en.md": {
-    "mtime": 1792846441.6957233,
-    "seen": 1792846533.113882,
-    "ast_hash": "0598994c2af4e84ebf8e5ecbf597267d",
+    "mtime": 1792869144.7113886,
+    "seen": 1792869314.1525803,
+    "ast_hash": "87382901eb824c332b8882008f497b03",
     "semantic_hash": ""
   },
   "docs/securite/index.en.md": {
@@ -255,6 +255,30 @@
     "mtime": 1792846471.9763784,
     "seen": 1792846533.113894,
     "ast_hash": "4e90681a5817280c7ca8e2c01e6112ff",
+    "semantic_hash": ""
+  },
+  "docs/assets/icons-mdi.json": {
+    "mtime": 1792868843.947726,
+    "seen": 1792869314.1524994,
+    "ast_hash": "1287ea0631728327527ae97170a0ee2b",
+    "semantic_hash": ""
+  },
+  "docs/javascripts/mermaid-icons.js": {
+    "mtime": 1792868887.998252,
+    "seen": 1792869314.1525047,
+    "ast_hash": "bd4de9616b042593b822b2f4bfb34043",
+    "semantic_hash": ""
+  },
+  "docs/reseau/dhcp.en.md": {
+    "mtime": 1792869232.3150911,
+    "seen": 1792869314.1525648,
+    "ast_hash": "b76a6637939e94e9d0d70d5b31d251e2",
+    "semantic_hash": ""
+  },
+  "docs/reseau/dhcp.md": {
+    "mtime": 1792869211.13967,
+    "seen": 1792869314.1525664,
+    "ast_hash": "ebf9ffcf3288b47e36967ab42fffc205",
     "semantic_hash": ""
   }
 }

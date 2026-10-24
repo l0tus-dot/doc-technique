@@ -120,3 +120,13 @@ Pistes testées sans effet : `search.lang: [fr, en]` au lieu de `fr` seul, désa
 ### Suite de la refonte
 
 Les 5 sous-projets sont faits. Rien d'autre n'est planifié pour l'instant — du contenu supplémentaire (Systèmes, Services, Docker Compose, voir `Changement.txt`) rouvrira naturellement certaines de ces sections dans le menu (sous-projet 1).
+
+## Correctif — libellés de nœud illisibles en thème sombre (post-refonte)
+
+Signalé après coup : sur les diagrammes à icônes (sous-projet « diagrammes »), le nom de chaque équipement (PC1, R1...) sous l'icône était illisible en thème sombre.
+
+**Cause réelle** : Mermaid génère son propre `<style>` à l'intérieur de chaque SVG, scopé par `#mermaid-<id>` — plus spécifique que les sélecteurs de classe de `extra.css`, et le nom de classe réel (`.labelBkg`, `.nodeLabel`) n'était pas celui ciblé par le correctif initial (deviné à tort via `.node .label foreignObject`). Confirmé par inspection directe du `<style>` injecté dans un environnement de test isolé (hors mkdocs/Material, pour éliminer les faux signaux dus au live-reload du serveur de dev et à l'affichage intermittent du panneau navigateur de cet environnement, qui ont ralenti le diagnostic).
+
+**Correctif** : `extra.css` cible les vrais noms de classe (`.labelBkg`, `.label`, `.label text`, `.label span`) avec `!important`, en réutilisant les variables `--md-mermaid-label-bg-color` / `-fg-color` déjà en place pour les libellés de liaison.
+
+**Trouvé en chemin, corrigé par prudence** : une vraie course entre le rendu automatique de Material et l'enregistrement du pack d'icônes peut occasionnellement laisser un diagramme complètement vide (pas juste illisible). `hooks` mis à jour dans `mermaid-icons.js` pour capturer le texte source de chaque diagramme dès l'exécution du script (avant que Material n'ait pu l'effacer), et le redessiner nous-mêmes via `mermaid.render()` si le rendu automatique a échoué.

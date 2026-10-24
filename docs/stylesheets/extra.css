@@ -588,6 +588,21 @@
   --md-mermaid-label-bg-color:#fdfbf6;
 }
 
+/* Libellé sous une icône de nœud (@{ icon: ... }) : Mermaid génère son
+   propre <style> à l'intérieur du SVG, scopé par #mermaid-<id> — plus
+   spécifique que nos variables --md-mermaid-label-*, qu'il n'utilise pas
+   pour ce libellé précis. Illisible en thème sombre sans !important. */
+.mermaid .labelBkg {
+  background-color: var(--md-mermaid-label-bg-color) !important;
+}
+
+.mermaid .label,
+.mermaid .label text,
+.mermaid .label span {
+  color: var(--md-mermaid-label-fg-color) !important;
+  fill: var(--md-mermaid-label-fg-color) !important;
+}
+
 /* ============================================================
    SCROLLBAR PERSONNALISÉE (WebKit)
    ============================================================ */

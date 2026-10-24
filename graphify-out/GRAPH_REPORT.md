@@ -1,17 +1,17 @@
 # Graph Report - doc-technique  (2026-10-24)
 
 ## Corpus Check
-- 40 files · ~27,477 words
+- 40 files · ~27,902 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 3, .css 1)
 
 ## Summary
-- 414 nodes · 441 edges · 35 communities (25 shown, 10 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.93)
+- 416 nodes · 443 edges · 36 communities (26 shown, 10 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.9)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a1605fff`
+- Built from commit: `ae8d01ba`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,6 +50,7 @@
 - CLAUDE.md
 - .claude/CLAUDE.md
 - 404.md
+- Procedure
 
 ## God Nodes (most connected - your core abstractions)
 1. `Docker` - 15 edges
@@ -82,11 +83,11 @@
 - **Network Configuration & Troubleshooting** — docs_reseau_routage_statique_routage_statique, docs_reseau_rip_v2_md, docs_reseau_nat_pat_nat_et_pat, docs_depannage_index_dépannage_réseau [EXTRACTED 0.90]
 - **Sudo Security Best Practices** — concept_sudo_noexec, concept_sudo_visudo, concept_sudo_aliases [EXTRACTED 0.90]
 
-## Communities (35 total, 10 thin omitted)
+## Communities (36 total, 10 thin omitted)
 
 ### Community 0 - "Privilege delegation with sudo"
-Cohesion: 0.06
-Nodes (30): Sudoers Aliases, NOEXEC Security Option, visudo Utility, Available pages, Cybersecurity, To be written, Comptes utilisés dans cette procédure, Contexte (+22 more)
+Cohesion: 0.09
+Nodes (20): Sudoers Aliases, NOEXEC Security Option, visudo Utility, Available pages, Cybersecurity, To be written, Comptes utilisés dans cette procédure, Contexte (+12 more)
 
 ### Community 1 - "NAT et PAT"
 Cohesion: 0.12
@@ -169,8 +170,8 @@ Cohesion: 0.25
 Nodes (8): Conventions, Encarts, Fiches de projet transverse, Nommage des fichiers, Notations, Plan d'adressage de référence, Plan de retour arrière, Schémas de topologie
 
 ### Community 26 - "Sous-projet 1 — Architecture de l'information"
-Cohesion: 0.09
-Nodes (22): Contexte et objectif, Contexte important, Décisions validées, Décisions validées, Décisions validées, Décisions validées, Décisions validées, Fichiers touchés (+14 more)
+Cohesion: 0.08
+Nodes (23): Contexte et objectif, Contexte important, Correctif — libellés de nœud illisibles en thème sombre (post-refonte), Décisions validées, Décisions validées, Décisions validées, Décisions validées, Décisions validées (+15 more)
 
 ### Community 27 - "Gabarit de fiche"
 Cohesion: 0.29
@@ -184,25 +185,29 @@ Nodes (6): Backup and reset, Cisco IOS cheat sheet, Diagnostics, Modes, SSH, Typ
 Cohesion: 0.40
 Nodes (4): Ajouter une fiche, Aperçu local, Documentation technique, Mise en ligne
 
+### Community 35 - "Procedure"
+Cohesion: 0.20
+Nodes (10): 1. Check the installation and the sudoers file, 2. Watch the default behavior, with no delegation, 3. Grant full rights via the `sudo` group, 4. Edit sudoers with `visudo`, 5. Delegate a precise right to a user, 6. The risk: bypassing an overly broad delegation, 7. Fixing it: the NOEXEC option, 8. Restricting a command with exclusions (+2 more)
+
 ## Knowledge Gaps
 - **8 isolated node(s):** `Sudoers Aliases`, `visudo Utility`, `ACL Cisco`, `Main Template Override`, `Source File Partial Override` (+3 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 321 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 322 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Docker` connect `Docker` to `reseau/index.md`?**
-  _High betweenness centrality (0.127) - this node is a cross-community bridge._
+  _High betweenness centrality (0.126) - this node is a cross-community bridge._
 - **What connects `Sudoers Aliases`, `visudo Utility`, `ACL Cisco` to the rest of the system?**
   _8 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Privilege delegation with sudo` be split into smaller, more focused modules?**
-  _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
 - **Why does `Délégation de droits avec sudo` connect `Privilege delegation with sudo` to `Procédure`?**
-  _High betweenness centrality (0.122) - this node is a cross-community bridge._
+  _High betweenness centrality (0.121) - this node is a cross-community bridge._
 - **Should `NAT et PAT` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
+- **Why does `Privilege delegation with sudo` connect `Privilege delegation with sudo` to `Procedure`?**
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
 - **Should `Routage statique` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
-- **Should `Docker` be split into smaller, more focused modules?**
-  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
