@@ -129,6 +129,7 @@ nav:
       - reseau/rip-v2.md
       - reseau/nat-pat.md
       - reseau/dhcp.md
+      - reseau/active-directory.md
       - depannage/index.md
   - Conteneurisation:
       - conteneurisation/docker.md
@@ -136,7 +137,6 @@ nav:
       - securite/index.md
       - securite/cisco-acl.md
       - securite/sudo-delegation.md
-      - securite/active-directory.md
   - Mémos:
       - memos/cisco-ios.md
       - memos/netplan.md

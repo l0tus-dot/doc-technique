@@ -8,6 +8,7 @@ Configuring interconnection devices: routing, address translation, segmentation,
 - [RIP version 2](rip-v2.md) — dynamic routing, no auto-summary, default route, authentication
 - [NAT and PAT](nat-pat.md) — getting the LAN out behind a public address, publishing a server
 - [DHCP](dhcp.md) — pools, exclusions, reservations, relay to a remote subnet
+- [Active Directory](active-directory.md) — organizational units, the AGDLP method, GPOs, replication between domain controllers
 - [Network troubleshooting](../depannage/index.md) — methodology by layer and common failure diagnostics
 
 For containerization and Docker, see the [Containerization](../conteneurisation/docker.md) section.
