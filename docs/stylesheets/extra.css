@@ -1,28 +1,28 @@
 /* ============================================================
    DOCUMENTATION TECHNIQUE — extra.css
-   Palette « Baie réseau » × Swiss/Minimalism × IBM Plex Sans
+   Palette « Sombre réchauffé » × Swiss/Minimalism × IBM Plex Sans
    ============================================================ */
 
 /* ---------- Tokens de design ---------- */
 
 :root {
   /* Couleurs de marque */
-  --bn-bg:           #0b1220;
-  --bn-surface:      #111b2e;
-  --bn-surface-high: #16233a;
-  --bn-surface-code: #060d1a;
-  --bn-line:         #1e2c47;
-  --bn-line-subtle:  #162038;
-  --bn-cyan:         #22d3ee;
-  --bn-cyan-dim:     rgba(34, 211, 238, 0.15);
-  --bn-cyan-deep:    #0e7490;
+  --bn-bg:           #241b14;
+  --bn-surface:      #2c2117;
+  --bn-surface-high: #332517;
+  --bn-surface-code: #1a130d;
+  --bn-line:         #4a3524;
+  --bn-line-subtle:  #3a2a1c;
+  --bn-cyan:         #e08a4f;
+  --bn-cyan-dim:     rgba(224, 138, 79, 0.15);
+  --bn-cyan-deep:    #a84a30;
   --bn-amber:        #f59e0b;
-  --bn-green:        #34d399;
+  --bn-green:        #8fbb7a;
   --bn-red:          #f87171;
-  --bn-blue:         #60a5fa;
-  --bn-text:         #d7e1f0;
-  --bn-muted:        #8ca0bc;
-  --bn-faint:        #4a6080;
+  --bn-blue:         #8aa3c4;
+  --bn-text:         #ead9c4;
+  --bn-muted:        #a3907a;
+  --bn-faint:        #6b5640;
 
   /* Espacement rythme 8dp */
   --sp-1: 4px;
@@ -56,47 +56,62 @@
   --md-default-bg-color--light:   var(--bn-surface);
   --md-default-fg-color:          var(--bn-text);
   --md-default-fg-color--light:   var(--bn-muted);
-  --md-default-fg-color--lighter: #5c7192;
-  --md-default-fg-color--lightest:#24354f;
+  --md-default-fg-color--lighter: #9c8468;
+  --md-default-fg-color--lightest:#3a2c1f;
 
-  --md-primary-fg-color:          #0e1930;
+  --md-primary-fg-color:          #1a130d;
   --md-primary-bg-color:          var(--bn-text);
   --md-accent-fg-color:           var(--bn-cyan);
 
   --md-typeset-color:             var(--bn-text);
   --md-typeset-a-color:           var(--bn-cyan);
-  --md-typeset-mark-color:        rgba(34, 211, 238, 0.25);
+  --md-typeset-mark-color:        rgba(224, 138, 79, 0.25);
 
   --md-code-bg-color:             var(--bn-surface-code);
-  --md-code-fg-color:             #e3ecf8;
-  --md-code-hl-keyword-color:     #7dd3fc;
-  --md-code-hl-string-color:      #86efac;
+  --md-code-fg-color:             #e9dcc8;
+  --md-code-hl-keyword-color:     #dba054;
+  --md-code-hl-string-color:      #9bc47a;
   --md-code-hl-number-color:      var(--bn-amber);
-  --md-code-hl-comment-color:     #4a6080;
+  --md-code-hl-comment-color:     var(--bn-faint);
   --md-code-hl-name-color:        var(--bn-text);
   --md-code-hl-function-color:    var(--bn-cyan);
-  --md-code-hl-operator-color:    #c084fc;
-  --md-code-hl-punctuation-color: #8ca0bc;
+  --md-code-hl-operator-color:    #c9966b;
+  --md-code-hl-punctuation-color: var(--bn-muted);
 
-  --md-footer-bg-color:           #060b14;
-  --md-footer-bg-color--dark:     #040810;
+  --md-footer-bg-color:           #160f0a;
+  --md-footer-bg-color--dark:     #0f0a06;
 }
 
 [data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-tabs {
   border-bottom: 1px solid var(--bn-line);
-  background-color: rgba(11, 18, 32, 0.95);
+  background-color: rgba(26, 19, 13, 0.95);
   backdrop-filter: blur(8px);
 }
 
 /* ---------- Schéma clair ---------- */
 
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color:  #0e1930;
-  --md-primary-bg-color:  #ffffff;
+  --md-default-bg-color:          #faf5ec;
+  --md-default-bg-color--light:   #f3ebdc;
+  --md-default-fg-color:          #3a2c20;
+  --md-default-fg-color--light:   #8a7a63;
+  --md-default-fg-color--lighter: #ab9877;
+  --md-default-fg-color--lightest:#e3d4bd;
+
+  --md-primary-fg-color:  #3a2c20;
+  --md-primary-bg-color:  #fdf8ef;
   --md-accent-fg-color:   var(--bn-cyan-deep);
+
+  --md-typeset-color:     #3a2c20;
   --md-typeset-a-color:   var(--bn-cyan-deep);
-  --md-code-bg-color:     #f0f4f8;
+  --md-typeset-mark-color: rgba(168, 74, 48, 0.2);
+
+  --md-code-bg-color:     #f3ebdc;
+  --md-code-fg-color:     #4a3a2a;
+
+  --md-footer-bg-color:        #3a2c20;
+  --md-footer-bg-color--dark:  #2c2117;
 }
 
 /* ============================================================
@@ -166,7 +181,7 @@
 }
 
 [data-md-color-scheme="slate"] .md-typeset h3 {
-  color: #a8bdd4;
+  color: #c9ab86;
 }
 
 /* H4 */
@@ -206,14 +221,14 @@
 }
 
 [data-md-color-scheme="slate"] .md-typeset code:not(.md-code__content) {
-  background-color: rgba(34, 211, 238, 0.08);
-  color:            #b8d4f0;
-  border:           1px solid rgba(34, 211, 238, 0.12);
+  background-color: rgba(224, 138, 79, 0.1);
+  color:            #f0c9a0;
+  border:           1px solid rgba(224, 138, 79, 0.15);
 }
 
 [data-md-color-scheme="default"] .md-typeset code:not(.md-code__content) {
-  background-color: #e8eef5;
-  color:            #1a3050;
+  background-color: #f0e4d0;
+  color:            #4a3420;
 }
 
 /* Séparateurs */
@@ -252,7 +267,7 @@
 
 /* Barre de titre de langue */
 [data-md-color-scheme="slate"] .md-typeset .highlight .filename {
-  background-color: rgba(34, 211, 238, 0.1);
+  background-color: rgba(224, 138, 79, 0.1);
   color:            var(--bn-cyan);
   border-bottom:    1px solid var(--bn-line);
   font-family:      var(--font-code);
@@ -305,7 +320,7 @@
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
   background-color: var(--bn-surface-high);
   color:            var(--bn-cyan);
-  border-color:     rgba(34, 211, 238, 0.2);
+  border-color:     rgba(224, 138, 79, 0.2);
 }
 
 /* Cellules */
@@ -322,27 +337,27 @@
 }
 
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) td {
-  background-color: rgba(22, 35, 58, 0.5);
+  background-color: rgba(51, 37, 23, 0.5);
 }
 
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover td {
-  background-color: rgba(34, 211, 238, 0.04);
+  background-color: rgba(224, 138, 79, 0.04);
   transition: background-color var(--t-fast);
 }
 
 /* Mode clair */
 [data-md-color-scheme="default"] .md-typeset table:not([class]) {
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e3d4bd;
 }
 
 [data-md-color-scheme="default"] .md-typeset table:not([class]) th {
-  background-color: #f1f5f9;
-  color:            #1e293b;
-  border-color:     #cbd5e1;
+  background-color: #f0e4d0;
+  color:            #3a2c20;
+  border-color:     #d9c6aa;
 }
 
 [data-md-color-scheme="default"] .md-typeset table:not([class]) tr:nth-child(even) td {
-  background-color: #f8fafc;
+  background-color: #f8f2e4;
 }
 
 /* ============================================================
@@ -381,7 +396,7 @@
 
 [data-md-color-scheme="slate"] .md-typeset .note > .admonition-title,
 [data-md-color-scheme="slate"] .md-typeset .info > .admonition-title {
-  background-color: rgba(96, 165, 250, 0.1);
+  background-color: rgba(138, 163, 196, 0.12);
   color:            var(--bn-blue);
 }
 
@@ -391,7 +406,7 @@
 }
 
 [data-md-color-scheme="slate"] .md-typeset .tip > .admonition-title {
-  background-color: rgba(52, 211, 153, 0.1);
+  background-color: rgba(143, 187, 122, 0.12);
   color:            var(--bn-green);
 }
 
@@ -465,7 +480,7 @@
 
 [data-md-color-scheme="slate"] .md-nav__link:hover {
   color:            var(--bn-cyan);
-  background-color: rgba(34, 211, 238, 0.05);
+  background-color: rgba(224, 138, 79, 0.05);
   border-radius:    var(--r-sm);
   transition:       color var(--t-fast), background-color var(--t-fast);
 }
@@ -517,15 +532,15 @@
 
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > :is(ul, ol) > li:hover,
 [data-md-color-scheme="slate"] .md-typeset .grid > .card:hover {
-  border-color: rgba(34, 211, 238, 0.4);
+  border-color: rgba(224, 138, 79, 0.4);
   transform:    translateY(-2px);
   box-shadow:   0 8px 24px rgba(0, 0, 0, 0.35),
-                0 0 0 1px rgba(34, 211, 238, 0.08);
+                0 0 0 1px rgba(224, 138, 79, 0.08);
 }
 
 /* Mode clair */
 [data-md-color-scheme="default"] .md-typeset .grid.cards > :is(ul, ol) > li {
-  border:        1px solid #e2e8f0;
+  border:        1px solid #e3d4bd;
   border-radius: var(--r-lg);
   transition:    border-color var(--t-normal), box-shadow var(--t-normal);
 }
@@ -569,8 +584,8 @@
 
 [data-md-color-scheme="default"] {
   --md-mermaid-edge-color:    var(--bn-cyan-deep);
-  --md-mermaid-node-bg-color: rgba(14, 116, 144, 0.06);
-  --md-mermaid-label-bg-color:#ffffff;
+  --md-mermaid-node-bg-color: rgba(168, 74, 48, 0.06);
+  --md-mermaid-label-bg-color:#faf5ec;
 }
 
 /* ============================================================
@@ -682,8 +697,8 @@
 
 .print-btn:hover {
   background-color: var(--bn-cyan);
-  color:            #0b1220;
-  box-shadow:       0 0 16px rgba(34, 211, 238, 0.25);
+  color:            #1a130d;
+  box-shadow:       0 0 16px rgba(224, 138, 79, 0.25);
 }
 
 .print-btn svg {
@@ -698,8 +713,8 @@
 
 [data-md-color-scheme="default"] .print-btn:hover {
   background-color: var(--bn-cyan-deep);
-  color:            #ffffff;
-  box-shadow:       0 0 12px rgba(14, 116, 144, 0.2);
+  color:            #fdf8ef;
+  box-shadow:       0 0 12px rgba(168, 74, 48, 0.2);
 }
 
 /* ============================================================
