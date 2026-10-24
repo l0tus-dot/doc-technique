@@ -1,3 +1,8 @@
+---
+tags:
+  - Privilege management
+---
+
 # Privilege delegation with sudo
 
 ## Context

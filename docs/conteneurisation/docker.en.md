@@ -1,3 +1,9 @@
+---
+tags:
+  - DNS
+  - Privilege management
+---
+
 # Docker
 
 ## Prerequisites

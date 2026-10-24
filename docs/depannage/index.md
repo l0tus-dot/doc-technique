@@ -1,3 +1,9 @@
+---
+tags:
+  - DNS
+  - Filtrage
+---
+
 # Dépannage réseau
 
 Les fiches de la section [Réseau](../reseau/index.md) documentent chacune leur propre dépannage, limité à la procédure concernée. Cette page rassemble les pannes qui reviennent le plus souvent, tous contextes confondus, classées par couche.

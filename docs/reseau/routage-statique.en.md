@@ -1,3 +1,8 @@
+---
+tags:
+  - Default route
+---
+
 # Static routing
 
 ## Context

@@ -1,5 +1,8 @@
 ---
 description: Configurer le PAT sur un routeur Cisco pour partager une adresse publique, et exposer un serveur interne via NAT statique ou redirection de port.
+tags:
+  - Filtrage
+  - Route par défaut
 ---
 
 # NAT et PAT

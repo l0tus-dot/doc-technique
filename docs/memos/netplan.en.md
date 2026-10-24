@@ -1,3 +1,9 @@
+---
+tags:
+  - DNS
+  - Default route
+---
+
 # Netplan cheat sheet
 
 Netplan is the standard network configuration tool on Ubuntu Server (18.04 and later). It doesn't drive the interface directly: it translates a YAML file into an underlying engine — `systemd-networkd` by default on a server, `NetworkManager` on a desktop machine.

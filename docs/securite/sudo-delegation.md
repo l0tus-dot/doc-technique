@@ -1,5 +1,7 @@
 ---
 description: Accorder des droits précis avec sudo sur Linux — visudo, délégation ciblée, NOEXEC, alias sudoers et risques de contournement.
+tags:
+  - Gestion des privilèges
 ---
 
 # Délégation de droits avec sudo

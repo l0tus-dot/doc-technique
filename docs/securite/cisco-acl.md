@@ -1,5 +1,7 @@
 ---
 description: Listes de contrôle d'accès Cisco IOS — ACL standard, étendue, nommée, masques génériques, access-class VTY.
+tags:
+  - Filtrage
 ---
 
 # Listes de contrôle d'accès (ACL Cisco)

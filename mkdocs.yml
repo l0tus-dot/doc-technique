@@ -79,6 +79,7 @@ markdown_extensions:
 plugins:
   - search:
       lang: fr
+  - tags
   - i18n:
       languages:
         - locale: fr
@@ -90,6 +91,7 @@ plugins:
             Accueil: Home
             Conventions: Conventions
             Gabarit: Template
+            Tags: Tags
             Réseau: Network
             Routage statique: Static routing
             Routage dynamique — RIP version 2: Dynamic routing — RIP v2
@@ -115,6 +117,7 @@ nav:
       - index.md
       - conventions.md
       - gabarit.md
+      - tags.md
   - Réseau:
       - reseau/index.md
       - reseau/routage-statique.md

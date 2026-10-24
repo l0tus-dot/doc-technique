@@ -1,3 +1,9 @@
+---
+tags:
+  - DNS
+  - Filtering
+---
+
 # Network troubleshooting
 
 Each page in the [Network](../reseau/index.md) section documents its own troubleshooting, scoped to that procedure. This page collects the failures that come up most often, across every context, sorted by layer.

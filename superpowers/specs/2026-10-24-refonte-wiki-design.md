@@ -73,3 +73,31 @@ Contenu de la page d'accueil, tags, recherche — sous-projets suivants.
 ### Hors scope de ce sous-projet
 
 Tags, recherche — sous-projets suivants.
+
+## Sous-projet 4 — Tags / catégories transverses
+
+### Contexte important
+
+Des tags avaient déjà existé sur ce site (plugin `tags` de mkdocs-material + un tag par technologie/section : `Cisco`, `Réseau`, `Docker`...) et avaient été retirés le 24/09 (commit `19dcab5`). Raison probable : ces tags redisaient ce que le titre de la fiche et la section du menu montraient déjà — ils n'ajoutaient rien à la recherche.
+
+### Décisions validées
+
+- **Taxonomie limitée aux concepts réellement transverses** (DNS, Authentification, Filtrage, Gestion des privilèges, Route par défaut) — jamais un nom de section ou de technologie déjà visible dans le menu. Règle de validation : un tag doit apparaître avec un contenu substantiel sur au moins 2 sections différentes, sinon il ne sert à rien de plus que le menu.
+- Chaque occurrence candidate a été vérifiée dans le contenu réel (pas seulement un mot-clé trouvé par recherche) avant d'être retenue — plusieurs faux positifs écartés : « clé » dans un fichier YAML Netplan (= clé d'un dictionnaire, pas une clé d'authentification), « droit » dans « câble droit/croisé » (dépannage réseau), « filtrage » d'une liste de conteneurs Docker (pas un filtrage réseau).
+- **Mécanisme** : plugin `tags` natif de mkdocs-material (celui d'avant, seule la taxonomie change) + page `tags.md` / `tags.en.md` avec le marqueur `<!-- material/tags -->`.
+
+### Répartition finale
+
+| Tag | Fiches |
+|---|---|
+| DNS | Dépannage réseau, Docker, Mémo Cisco IOS, Mémo Netplan |
+| Authentification | RIP v2, Mémo Cisco IOS |
+| Filtrage | NAT/PAT, Dépannage réseau, ACL Cisco |
+| Gestion des privilèges | Délégation sudo, Docker |
+| Route par défaut | Routage statique, RIP v2, NAT/PAT, Mémo Netplan |
+
+Vérifié visuellement (page Tags + fiche Docker) via `mkdocs serve` avant validation.
+
+### Hors scope de ce sous-projet
+
+Recherche / filtres — sous-projet suivant.

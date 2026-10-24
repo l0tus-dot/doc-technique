@@ -1,3 +1,9 @@
+---
+tags:
+  - DNS
+  - Authentication
+---
+
 # Cisco IOS cheat sheet
 
 ## Modes

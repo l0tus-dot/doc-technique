@@ -1,5 +1,8 @@
 ---
 description: Aide-mémoire des commandes Cisco IOS essentielles — modes, configuration initiale, SSH, interfaces, diagnostic, sauvegarde, debug.
+tags:
+  - DNS
+  - Authentification
 ---
 
 # Mémo Cisco IOS

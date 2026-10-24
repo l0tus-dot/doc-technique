@@ -1,3 +1,9 @@
+---
+tags:
+  - Authentication
+  - Default route
+---
+
 # Dynamic routing — RIP version 2
 
 ## Context
