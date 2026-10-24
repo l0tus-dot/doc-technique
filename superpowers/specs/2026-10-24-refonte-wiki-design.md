@@ -1,0 +1,45 @@
+# Refonte du wiki — note de design
+
+## Contexte et objectif
+
+Site utilisé en priorité comme aide-mémoire personnel (TP, stage, homelab). Trois problèmes identifiés :
+
+1. Mise en page trop dense, parcours pas assez fluide.
+2. Organisation du contenu à revoir (sections vides, découpage, pas de fil conducteur pour un nouveau lecteur).
+3. Fonctionnalités manquantes : recherche/filtres, page d'accueil plus riche, tags transverses.
+
+Ces trois points ne se traitent pas d'un bloc : ils dépendent les uns des autres (tags et accueil s'appuient sur la structure finale ; la recherche s'appuie sur les tags). Décomposé en 5 sous-projets, chacun brainstormé et validé séparément :
+
+1. **Architecture de l'information** (ce document) — fondation
+2. Mise en page / espacement
+3. Page d'accueil et chemin de lecture
+4. Tags / catégories transverses
+5. Recherche / filtres
+
+## Sous-projet 1 — Architecture de l'information
+
+### Décisions validées
+
+- **Sections vides retirées du menu** jusqu'à contenu réel : Systèmes, Services, Projets transverses disparaissent de `nav`. Leurs listes « à rédiger » sont consolidées dans `Changement.txt` (backlog hors navigation, à la racine du dépôt).
+- **Docker obtient sa propre section** « Conteneurisation » (le fichier vivait déjà dans `docs/conteneurisation/`, seule la navigation change).
+- **Dépannage réseau reste rattaché à Réseau** dans le menu — non identifié comme un problème, pas de changement sans raison.
+- **Pas de parcours de lecture imposé** entre sections : usage en aide-mémoire ponctuel, chaque section reste accessible directement. Le « fil conducteur » se traite plutôt au niveau de la page d'accueil (sous-projet 3), pas de l'ordre des onglets.
+- Le gabarit de projet transverse (actuellement dans `projets-transverses/index.md`) est récupéré comme second modèle dans `gabarit.md` avant suppression de la page stub, pour ne pas perdre ce contenu réutilisable.
+
+### Nav résultant
+
+Accueil · Réseau · Conteneurisation · Cybersécurité · Mémos
+
+### Fichiers touchés
+
+- `mkdocs.yml` — nav + `i18n.nav_translations`
+- `docs/index.md` / `.en.md` — cartes d'accueil, paragraphe « Comment lire une fiche »
+- `docs/conventions.md` / `.en.md` — lien vers le gabarit de projet
+- `docs/reseau/index.md` / `.en.md` — lien Docker vers Conteneurisation
+- `docs/gabarit.md` / `.en.md` — ajout du gabarit de projet
+- Suppression : `docs/systemes/index.md(.en.md)`, `docs/services/index.md(.en.md)`, `docs/projets-transverses/index.md(.en.md)`
+- Création : `Changement.txt` (backlog consolidé)
+
+### Hors scope de ce sous-projet
+
+Mise en page, page d'accueil enrichie, tags, recherche — traités dans les sous-projets suivants.
