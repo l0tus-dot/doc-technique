@@ -7,6 +7,7 @@ Configuring interconnection devices: routing, address translation, segmentation,
 - [Static routing](routage-statique.md) — interconnecting two LANs, default route, administrative distance
 - [RIP version 2](rip-v2.md) — dynamic routing, no auto-summary, default route, authentication
 - [NAT and PAT](nat-pat.md) — getting the LAN out behind a public address, publishing a server
+- [DHCP](dhcp.md) — pools, exclusions, reservations, relay to a remote subnet
 - [Network troubleshooting](../depannage/index.md) — methodology by layer and common failure diagnostics
 
 For containerization and Docker, see the [Containerization](../conteneurisation/docker.md) section.
@@ -19,5 +20,4 @@ For access control lists and security filtering, see [Access Control Lists (Cisc
 - [ ] Router-on-a-stick inter-VLAN routing
 - [ ] Single-area OSPF
 - [ ] Standard and extended access control lists
-- [ ] DHCP relay (`ip helper-address`)
 - [ ] Link aggregation (EtherChannel)
