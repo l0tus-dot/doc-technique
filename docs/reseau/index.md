@@ -11,7 +11,7 @@ Configuration des équipements d'interconnexion : routage, traduction d'adresses
 - [Active Directory](active-directory.md) — unités d'organisation, méthode AGDLP, GPO, réplication entre contrôleurs de domaine
 - [Dépannage réseau](../depannage/index.md) — méthode par couche et diagnostic des pannes fréquentes
 
-Pour la conteneurisation et Docker, voir la section [Conteneurisation](../conteneurisation/docker.md).
+Pour la conteneurisation et Docker, voir la section [Conteneurisation](../conteneurisation/index.md).
 
 Pour les listes de contrôle d'accès et le filtrage de sécurité, voir [Listes de contrôle d'accès (ACL Cisco)](../securite/cisco-acl.md) dans la section Cybersécurité.
 

@@ -101,7 +101,13 @@ plugins:
             NAT et PAT: NAT and PAT
             DHCP: DHCP
             Conteneurisation: Containerization
-            Docker: Docker
+            Installation et concepts: Installation and concepts
+            Images et conteneurs: Images and containers
+            Réseau Docker: Docker networking
+            Volumes et persistance: Volumes and persistence
+            Dockerfile et images personnalisées: Dockerfile and custom images
+            Docker Compose: Docker Compose
+            Portainer et maintenance: Portainer and maintenance
             Dépannage réseau: Network troubleshooting
             Cybersécurité: Cybersecurity
             Segmentation VLSM: VLSM Subnetting
@@ -134,7 +140,14 @@ nav:
       - reseau/active-directory.md
       - depannage/index.md
   - Conteneurisation:
-      - conteneurisation/docker.md
+      - conteneurisation/index.md
+      - conteneurisation/docker-installation.md
+      - conteneurisation/docker-conteneurs.md
+      - conteneurisation/docker-reseau.md
+      - conteneurisation/docker-volumes.md
+      - conteneurisation/docker-dockerfile.md
+      - conteneurisation/docker-compose.md
+      - conteneurisation/docker-maintenance.md
   - Cybersécurité:
       - securite/index.md
       - securite/vlsm.md

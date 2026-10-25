@@ -11,7 +11,7 @@ Configuring interconnection devices: routing, address translation, segmentation,
 - [Active Directory](active-directory.md) — organizational units, the AGDLP method, GPOs, replication between domain controllers
 - [Network troubleshooting](../depannage/index.md) — methodology by layer and common failure diagnostics
 
-For containerization and Docker, see the [Containerization](../conteneurisation/docker.md) section.
+For containerization and Docker, see the [Containerization](../conteneurisation/index.md) section.
 
 For access control lists and security filtering, see [Access Control Lists (Cisco ACL)](../securite/cisco-acl.md) in the Cybersecurity section.
 
